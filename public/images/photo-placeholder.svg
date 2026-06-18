@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#F3EFE6"/>
+  <rect x="72" y="72" width="1456" height="856" rx="36" fill="#FAF8F3" stroke="#D8E4EC" stroke-width="8"/>
+  <rect x="132" y="140" width="440" height="28" rx="14" fill="#0E6C9D" fill-opacity=".12"/>
+  <rect x="132" y="196" width="320" height="18" rx="9" fill="#10212B" fill-opacity=".14"/>
+  <rect x="132" y="240" width="520" height="18" rx="9" fill="#10212B" fill-opacity=".1"/>
+  <rect x="132" y="320" width="1336" height="470" rx="28" fill="#E9F0F5"/>
+  <circle cx="380" cy="548" r="92" fill="#D8E4EC"/>
+  <circle cx="808" cy="548" r="92" fill="#D8E4EC"/>
+  <circle cx="1236" cy="548" r="92" fill="#D8E4EC"/>
+  <rect x="220" y="684" width="320" height="18" rx="9" fill="#10212B" fill-opacity=".1"/>
+  <rect x="648" y="684" width="320" height="18" rx="9" fill="#10212B" fill-opacity=".1"/>
+  <rect x="1076" y="684" width="320" height="18" rx="9" fill="#10212B" fill-opacity=".1"/>
+  <rect x="132" y="840" width="360" height="18" rx="9" fill="#10212B" fill-opacity=".08"/>
+  <rect x="132" y="878" width="250" height="18" rx="9" fill="#10212B" fill-opacity=".08"/>
+  <text x="132" y="518" fill="#0E6C9D" font-family="Arial, sans-serif" font-size="52" font-weight="700">
+    IMAGE PLACEHOLDER
+  </text>
+  <text x="132" y="580" fill="#5B6B75" font-family="Arial, sans-serif" font-size="28">
+    Replace with approved training or portrait photography.
+  </text>
+</svg>
