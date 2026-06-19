@@ -1,7 +1,8 @@
-import type { ReactNode } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, CheckCircle2, MessageSquareText, ShieldCheck, Users, Wrench } from "lucide-react"
+import PageCtaPanel from "@/components/page-cta-panel"
+import SectionEyebrow from "@/components/section-eyebrow"
 
 const situations = [
   "Technische Inhalte müssen verständlich erklärt werden, obwohl Zeit und Aufmerksamkeit knapp sind.",
@@ -56,6 +57,12 @@ const formats = [
   },
 ]
 
+const signals = [
+  "Verständlicher erklären, ohne an technischer Tiefe zu verlieren",
+  "Kundenkontakte auch unter Druck ruhig und sicher führen",
+  "Als Serviceteam professioneller, klarer und verbindlicher wirken",
+]
+
 const faqs = [
   {
     question: "Ist das eher Soft-Skill-Training oder wirklich technisch anschlussfähig?",
@@ -79,52 +86,61 @@ const faqs = [
   },
 ]
 
-function Eyebrow({ children }: { children: ReactNode }) {
-  return <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">{children}</p>
-}
-
 export default function ServiceTechPage() {
   return (
     <main className="bg-background text-foreground">
-      <section className="overflow-hidden bg-[#faf8f3] pt-32" aria-labelledby="servicetechniker-hero-heading">
-        <div className="mx-auto max-w-7xl px-4 pb-18 sm:px-6 lg:px-8 lg:pb-24">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+      <section className="overflow-hidden bg-[#faf8f3] pt-28 sm:pt-32" aria-labelledby="servicetechniker-hero-heading">
+        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-22">
+          <div className="grid gap-10 border-b border-border/70 pb-12 lg:grid-cols-12 lg:gap-12 lg:pb-14">
             <div className="lg:col-span-7">
-              <Eyebrow>Für Servicetechniker</Eyebrow>
+              <SectionEyebrow>Für Servicetechniker</SectionEyebrow>
               <h1
                 id="servicetechniker-hero-heading"
-                className="mt-5 max-w-4xl font-display text-[clamp(2.75rem,6vw,5.6rem)] font-light leading-[0.95] tracking-[-0.04em]"
+                className="mt-6 max-w-5xl font-display text-[clamp(2.8rem,6.2vw,5.9rem)] font-light leading-[0.93] tracking-[-0.045em]"
               >
                 Wenn fachliche Stärke im Kundenkontakt
                 <span className="block italic text-primary">klar und souverän</span>
                 wirken soll.
               </h1>
+              <p className="mt-7 max-w-2xl text-[15px] leading-8 text-muted-foreground">
+                Servicetechniker prägen oft den Moment, an den sich Kunden erinnern. Dieses Training stärkt
+                Erklärungsfähigkeit, Auftreten, Deeskalation und kommunikative Sicherheit genau dort, wo technische
+                Kompetenz im direkten Kontakt erlebbar werden muss.
+              </p>
             </div>
 
-            <div className="lg:col-span-5">
-              <p className="max-w-md text-[15px] leading-8 text-muted-foreground">
-                Servicetechniker prägen oft den entscheidenden Moment beim Kunden. Dieses Training stärkt Erklären,
-                Auftreten, Deeskalation und kommunikative Sicherheit in genau diesen Situationen.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col">
-                <Link
-                  href="/kontakt"
-                  className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
-                >
-                  Erstgespräch anfragen
-                </Link>
-                <Link
-                  href="/case-studies"
-                  className="inline-flex items-center justify-center rounded-full border border-border bg-white px-6 py-3.5 text-sm font-medium text-foreground/78 transition-all hover:border-foreground/20 hover:text-foreground"
-                >
-                  Praxisbeispiele ansehen
-                </Link>
+            <div className="lg:col-span-5 lg:pt-10">
+              <div className="soft-card p-6 sm:p-7">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">
+                  Typische Hebel im Service
+                </p>
+                <div className="mt-5 space-y-4">
+                  {signals.map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <CheckCircle2 className="mt-1 h-4.5 w-4.5 shrink-0 text-primary" />
+                      <p className="text-sm leading-7 text-muted-foreground">{item}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-7 flex flex-col gap-3">
+                  <Link href="/kontakt" className="btn-brand">
+                    Erstgespräch anfragen
+                  </Link>
+                  <Link href="/praxisbeispiele" className="btn-brand-outline">
+                    Praxisbeispiele ansehen
+                  </Link>
+                </div>
+
+                <div className="mt-7 border-t border-border/70 pt-4 text-[11px] uppercase tracking-[0.18em] text-muted-foreground/78">
+                  Inhouse · Praxisnah · Ruhig · Direkt anschlussfähig
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_25px_80px_rgba(16,33,43,0.08)]">
+          <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="overflow-hidden rounded-[32px] border border-border/70 bg-white shadow-[0_25px_80px_rgba(16,33,43,0.08)]">
               <div className="relative aspect-[4/3] min-h-[260px] sm:aspect-[16/10]">
                 <Image
                   src="/images/photo-placeholder.svg"
@@ -134,9 +150,15 @@ export default function ServiceTechPage() {
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
               </div>
+              <div className="grid gap-4 border-t border-border/70 bg-[#fcfbf8] px-6 py-4 text-sm text-muted-foreground sm:grid-cols-3">
+                <p>Praxisnah statt theoretisch.</p>
+                <p>Realistische Kundensituationen.</p>
+                <p>Direkt übertragbar in den Arbeitsalltag.</p>
+              </div>
             </div>
-            <div className="rounded-[30px] border border-border/70 bg-white p-7 sm:p-8">
-              <Eyebrow>Typische Situationen</Eyebrow>
+
+            <div className="white-card p-7 sm:p-8">
+              <SectionEyebrow>Typische Situationen</SectionEyebrow>
               <div className="mt-6 space-y-5">
                 {situations.map((item) => (
                   <div key={item} className="flex items-start gap-3">
@@ -155,19 +177,22 @@ export default function ServiceTechPage() {
         </div>
       </section>
 
-      <section className="border-y border-border/70 bg-white py-20 sm:py-28" aria-labelledby="problem-tech-heading">
+      <section className="border-y border-border/70 bg-white py-18 sm:py-24" aria-labelledby="problem-tech-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-              <Eyebrow>Worum es wirklich geht</Eyebrow>
-              <h2 id="problem-tech-heading" className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
+              <SectionEyebrow>Worum es wirklich geht</SectionEyebrow>
+              <h2
+                id="problem-tech-heading"
+                className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl"
+              >
                 Im technischen Service ist Kommunikation kein Zusatz.
               </h2>
             </div>
             <div className="lg:col-span-5">
               <p className="max-w-md text-[15px] leading-8 text-muted-foreground">
-                Kunden erleben Kompetenz nicht nur über fachlich richtige Lösungen. Sie erleben sie auch über Klarheit,
-                Haltung, Gesprächsführung und den Umgang mit schwierigen Situationen.
+                Kunden erleben Kompetenz nicht nur über fachlich richtige Lösungen. Sie erleben sie auch über
+                Verständlichkeit, Haltung, Gesprächsführung und den Umgang mit schwierigen Situationen.
               </p>
             </div>
           </div>
@@ -176,7 +201,7 @@ export default function ServiceTechPage() {
             {focusAreas.map((item) => {
               const Icon = item.icon
               return (
-                <div key={item.title} className="rounded-[28px] border border-border/70 bg-[#fcfbf8] p-6 sm:p-8">
+                <div key={item.title} className="soft-card p-6 sm:p-8">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/8 text-primary">
                     <Icon className="h-5 w-5" />
                   </span>
@@ -189,18 +214,28 @@ export default function ServiceTechPage() {
         </div>
       </section>
 
-      <section className="bg-[#f3efe6] py-20 sm:py-28" aria-labelledby="benefits-heading">
+      <section className="bg-[#f3efe6] py-18 sm:py-24" aria-labelledby="benefits-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
             <div>
-              <Eyebrow>Nutzen und Wirkung</Eyebrow>
-              <h2 id="benefits-heading" className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
+              <SectionEyebrow>Nutzen und Wirkung</SectionEyebrow>
+              <h2
+                id="benefits-heading"
+                className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl"
+              >
                 Was sich für Teilnehmende und Unternehmen verändern soll.
               </h2>
+              <p className="mt-6 max-w-md text-[15px] leading-8 text-muted-foreground">
+                Entscheidend ist nicht nur, dass Inhalte verstanden wurden. Entscheidend ist, dass Kundenkontakt
+                ruhiger, klarer und professioneller erlebt wird.
+              </p>
             </div>
+
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-[28px] border border-border/70 bg-white p-7">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">Für Teilnehmende</p>
+              <div className="white-card p-7">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">
+                  Für Teilnehmende
+                </p>
                 <ul className="mt-6 space-y-4">
                   {participantBenefits.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[15px] leading-8 text-muted-foreground">
@@ -210,8 +245,11 @@ export default function ServiceTechPage() {
                   ))}
                 </ul>
               </div>
-              <div className="rounded-[28px] border border-border/70 bg-white p-7">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">Für Unternehmen</p>
+
+              <div className="white-card p-7">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">
+                  Für Unternehmen
+                </p>
                 <ul className="mt-6 space-y-4">
                   {businessBenefits.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[15px] leading-8 text-muted-foreground">
@@ -226,12 +264,15 @@ export default function ServiceTechPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20 sm:py-28" aria-labelledby="formats-heading">
+      <section className="bg-white py-18 sm:py-24" aria-labelledby="formats-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-              <Eyebrow>Geeignete Formate</Eyebrow>
-              <h2 id="formats-heading" className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
+              <SectionEyebrow>Geeignete Formate</SectionEyebrow>
+              <h2
+                id="formats-heading"
+                className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl"
+              >
                 So kann die Zusammenarbeit aussehen.
               </h2>
             </div>
@@ -245,7 +286,7 @@ export default function ServiceTechPage() {
 
           <div className="mt-12 grid gap-5 lg:grid-cols-3 lg:gap-6">
             {formats.map((item) => (
-              <div key={item.label} className="rounded-[28px] border border-border/70 bg-[#fcfbf8] p-6 sm:p-8">
+              <div key={item.label} className="soft-card p-6 sm:p-8">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">{item.label}</p>
                 <p className="mt-6 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
               </div>
@@ -254,12 +295,15 @@ export default function ServiceTechPage() {
         </div>
       </section>
 
-      <section className="bg-[#fbfaf6] py-20 sm:py-28" aria-labelledby="proof-tech-heading">
+      <section className="bg-[#fbfaf6] py-18 sm:py-24" aria-labelledby="proof-tech-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-              <Eyebrow>Praxis und Vertrauen</Eyebrow>
-              <h2 id="proof-tech-heading" className="mt-5 font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
+              <SectionEyebrow>Praxis und Vertrauen</SectionEyebrow>
+              <h2
+                id="proof-tech-heading"
+                className="mt-5 font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl"
+              >
                 Ein Beispiel aus dem Serviceumfeld.
               </h2>
             </div>
@@ -276,6 +320,7 @@ export default function ServiceTechPage() {
                   sizes="(max-width: 1024px) 100vw, 55vw"
                 />
               </div>
+
               <div className="p-8 sm:p-10 lg:p-12">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground/74">
                   Kundenstimme aus dem Servicekontext
@@ -299,17 +344,11 @@ export default function ServiceTechPage() {
                 </div>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Link
-                    href="/case-studies"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-[#10212B] transition-colors hover:bg-[#d89c17]"
-                  >
+                  <Link href="/praxisbeispiele" className="btn-brand">
                     Praxisbeispiele ansehen
                     <ArrowRight className="h-4 w-4" />
                   </Link>
-                  <Link
-                    href="/kontakt"
-                    className="inline-flex items-center justify-center rounded-full border border-border px-5 py-3 text-sm font-medium text-foreground/78 transition-colors hover:border-foreground/20 hover:text-foreground"
-                  >
+                  <Link href="/kontakt" className="btn-brand-outline">
                     Über Format sprechen
                   </Link>
                 </div>
@@ -319,73 +358,47 @@ export default function ServiceTechPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20 sm:py-28" aria-labelledby="faq-tech-heading">
+      <section className="bg-white py-18 sm:py-24" aria-labelledby="faq-tech-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-              <Eyebrow>Häufige Fragen</Eyebrow>
-              <h2 id="faq-tech-heading" className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
+              <SectionEyebrow>Häufige Fragen</SectionEyebrow>
+              <h2
+                id="faq-tech-heading"
+                className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl"
+              >
                 Was oft vor einem ersten Gespräch geklärt werden möchte.
               </h2>
             </div>
           </div>
 
-          <div className="mt-12 grid gap-5">
+          <div className="mt-12 grid gap-4">
             {faqs.map((item) => (
-              <div key={item.question} className="rounded-[26px] border border-border/70 bg-[#fcfbf8] p-6 sm:p-8">
-                <h3 className="font-display text-2xl font-medium leading-snug text-foreground">{item.question}</h3>
+              <details
+                key={item.question}
+                className="group rounded-[26px] border border-border/70 bg-[#fcfbf8] p-6 open:bg-white sm:p-8"
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-display text-2xl font-medium leading-snug text-foreground">
+                  <span>{item.question}</span>
+                  <span className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/70 text-lg text-primary transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
                 <p className="mt-4 max-w-4xl text-[15px] leading-8 text-muted-foreground">{item.answer}</p>
-              </div>
+              </details>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#102f42] py-20 text-white sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.03] px-8 py-10 sm:px-10 sm:py-12">
-            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/52">Nächster Schritt</p>
-                <h2 className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
-                  Wenn Sie Servicetechniker im Kundenkontakt gezielt stärken möchten.
-                </h2>
-                <p className="mt-5 max-w-2xl text-[15px] leading-8 text-white/72">
-                  In einem ersten Gespräch klären wir Zielgruppe, typische Situationen und welches Format zu Ihrem
-                  technischen Alltag passt.
-                </p>
-              </div>
-
-              <div className="grid gap-4">
-                <Link
-                  href="/kontakt"
-                  className="inline-flex items-center justify-between rounded-[26px] border border-white/10 bg-white/[0.05] px-5 py-4 text-sm font-semibold text-white transition-colors hover:bg-white/[0.08]"
-                >
-                  <span className="flex items-center gap-3">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary">
-                      <Users className="h-4 w-4" />
-                    </span>
-                    Erstgespräch anfragen
-                  </span>
-                  <ArrowRight className="h-4 w-4 text-white/56" />
-                </Link>
-                <Link
-                  href="/case-studies"
-                  className="inline-flex items-center justify-between rounded-[26px] border border-white/10 bg-white/[0.05] px-5 py-4 text-sm font-semibold text-white transition-colors hover:bg-white/[0.08]"
-                >
-                  <span className="flex items-center gap-3">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary">
-                      <ArrowRight className="h-4 w-4" />
-                    </span>
-                    Weitere Praxisbeispiele ansehen
-                  </span>
-                  <ArrowRight className="h-4 w-4 text-white/56" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageCtaPanel
+        eyebrow="Nächster Schritt"
+        title="Wenn Sie Servicetechniker im Kundenkontakt gezielt stärken möchten."
+        primaryHref="/kontakt"
+        primaryLabel="Erstgespräch anfragen"
+        secondaryHref="/praxisbeispiele"
+        secondaryLabel="Weitere Praxisbeispiele ansehen"
+      />
     </main>
   )
 }
