@@ -141,7 +141,7 @@ export default function HomepageV3() {
           <div className="mt-10 overflow-hidden rounded-[32px] border border-border/70 bg-white shadow-[0_28px_85px_rgba(16,33,43,0.08)]">
             <div className="relative aspect-[4/3] min-h-[240px] sm:aspect-[21/9] sm:min-h-[300px]">
               <Image
-                src="/images/photo-placeholder.svg"
+                src="/images/hero-training.jpg"
                 alt="Seminarsituation mit Bernd Grossmann und Teilnehmern in technischem Umfeld"
                 fill
                 priority
