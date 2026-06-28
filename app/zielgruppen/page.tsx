@@ -203,7 +203,7 @@ export default function ZielgruppenPage() {
                 {overviewCards.map((item) => (
                   <div key={item.label} className="rounded-[24px] border border-border/70 bg-[#fcfbf8] p-6 shadow-[0_10px_30px_rgba(16,33,43,0.03)]">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.label}</p>
-                    <p className="mt-4 text-[15px] leading-7 text-muted-foreground">{item.value}</p>
+                    <p className="mt-4 text-[15px] leading-7 text-muted-foreground [overflow-wrap:anywhere]">{item.value}</p>
                   </div>
                 ))}
               </div>
@@ -239,15 +239,15 @@ export default function ZielgruppenPage() {
                         <div className="mt-7 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                           <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Typische Lage</p>
-                            <p className="mt-3 text-sm leading-7 text-muted-foreground">{group.situation}</p>
+                            <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">{group.situation}</p>
                           </div>
                           <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Nähe zum Kunden</p>
-                            <p className="mt-3 text-sm leading-7 text-muted-foreground">{group.proximity}</p>
+                            <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">{group.proximity}</p>
                           </div>
                           <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5 md:col-span-2 xl:col-span-1">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Passende Formate</p>
-                            <p className="mt-3 text-sm leading-7 text-muted-foreground">{group.formats}</p>
+                            <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">{group.formats}</p>
                           </div>
                         </div>
 
