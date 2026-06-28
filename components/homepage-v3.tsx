@@ -80,8 +80,19 @@ const methodSteps = [
 
 const clientLogos = ["Siemens", "Bosch", "Continental", "AVL", "DMG MORI", "REHAU"]
 
+const homepageProof = {
+  eyebrow: "Stimme aus der Praxis",
+  quote:
+    "Dieses Jahr haben wir rund 25 Techniker zu einem dieser Entwicklungs-Seminare geschickt. Kommendes Jahr schicken wir die nächsten 25 Kollegen.",
+  author: "Dirk Wolfgang Dietrich",
+  role: "Teamleiter Wartung & Service",
+  proofLabel: "Sichtbare Wirkung",
+  proofValue: "25 weitere Techniker folgen",
+}
+
 const testimonials = [
   {
+    title: "Weiterempfohlen und weitergeführt",
     quote:
       "Dieses Jahr haben wir rund 25 Techniker zu einem dieser Entwicklungs-Seminare geschickt. Kommendes Jahr schicken wir die nächsten 25 Kollegen.",
     author: "Dirk Wolfgang Dietrich",
@@ -89,6 +100,7 @@ const testimonials = [
     company: "R.O.M. Rud. Otto Meyer Technik GmbH & Co. KG",
   },
   {
+    title: "Pilotseminar mit Folgewirkung",
     quote:
       "Ich bin sprachlos. Nach diesem Seminar folgten vier weitere Seminare sowie weitere Trainingsformate für Projektleiter, Key Account Manager und Bauleiter.",
     author: "Stefan Zöller",
@@ -179,10 +191,21 @@ export default function HomepageV3() {
             </div>
 
             <div className="soft-card px-5 py-5">
-              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground/74">Wirkung</p>
-              <p className="mt-3 text-sm leading-7 text-foreground/82">
-                Rund 25 Techniker in einem Jahr trainiert. Weitere 25 Kollegen folgen im nächsten Schritt.
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">
+                {homepageProof.eyebrow}
               </p>
+              <blockquote className="mt-3 text-sm leading-7 text-foreground/82">
+                „{homepageProof.quote}“
+              </blockquote>
+              <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground/72">
+                {homepageProof.author} · {homepageProof.role}
+              </p>
+              <div className="mt-4 rounded-[18px] border border-border/70 bg-white/75 px-4 py-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">
+                  {homepageProof.proofLabel}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-foreground/82">{homepageProof.proofValue}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -288,8 +311,8 @@ export default function HomepageV3() {
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative min-h-[320px]">
                 <Image
-                  src="/images/grossmann/practice-internal-external-dialogue.jpeg"
-                  alt="Diskussions- und Arbeitsszene aus einem technischen Seminarumfeld"
+                  src="/images/grossmann/home-case-technical-discussion.jpg"
+                  alt="Trainingssituation aus einem technischen Projekt- und Verhandlungskontext"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 55vw"
@@ -444,16 +467,22 @@ export default function HomepageV3() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="soft-card p-5">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Grundlage</p>
-                <p className="mt-3 text-sm leading-7 text-muted-foreground">BWL, Sozialpsychologie und langjährige Arbeit mit technischen Zielgruppen.</p>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Seit 1994</p>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                  Arbeit mit Service- und Führungsteams in technischen Umfeldern.
+                </p>
               </div>
               <div className="soft-card p-5">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Methodik</p>
-                <p className="mt-3 text-sm leading-7 text-muted-foreground">Rogers, Transaktionsanalyse und MicroSkills - praxisnah übersetzt.</p>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Praxisnähe</p>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                  Technischer Alltag, Kundensituationen, Führung und Zusammenarbeit als Ausgangspunkt.
+                </p>
               </div>
               <div className="soft-card p-5">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Haltung</p>
-                <p className="mt-3 text-sm leading-7 text-muted-foreground">Gute Technik braucht gute Gespräche.</p>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Arbeitsweise</p>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                  Nicht theoretisch-abgehoben, sondern anschlussfähig an reale Situationen.
+                </p>
               </div>
             </div>
 
@@ -490,21 +519,22 @@ export default function HomepageV3() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             {testimonials.map((item, index) => (
-              <blockquote
+              <article
                 key={item.author}
                 className={`rounded-[30px] border border-border/70 p-7 sm:p-8 ${
                   index === 0 ? "bg-white shadow-[0_18px_55px_rgba(16,33,43,0.06)]" : "bg-[#faf8f3] lg:mt-10"
                 }`}
               >
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.title}</p>
                 <p className="font-display text-[clamp(1.2rem,2vw,1.8rem)] font-light italic leading-[1.65] text-foreground/80">
                   „{item.quote}“
                 </p>
                 <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground/78">
                   {item.author} · {item.role} · {item.company}
                 </p>
-              </blockquote>
+              </article>
             ))}
           </div>
 
