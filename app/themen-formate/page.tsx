@@ -71,6 +71,36 @@ const decisionPoints = [
   },
 ]
 
+const comparisonRows = [
+  {
+    label: "Gut geeignet, wenn",
+    seminar: "ein gemeinsamer Einstieg, klare Muster und direkte Praxisbeispiele gebraucht werden.",
+    development: "mehrere Rollen, Teams oder Niederlassungen gemeinsam an Sprache und Zusammenarbeit arbeiten sollen.",
+    coaching: "eine einzelne Person eine konkrete Situation oder Führungsrolle gezielt bearbeiten will.",
+  },
+  {
+    label: "Typischer Fokus",
+    seminar: "Kundenkontakt, Gesprächsführung, Führung, Moderation, Reklamation oder Wirkung im Alltag.",
+    development: "Transfer, Schnittstellen, gemeinsame Haltung, Führungslinie und Zusammenarbeit im System.",
+    coaching: "heikle Gespräche, Klarheit, Auftreten, Konflikte, Selbstbild/Fremdbild und Führungswirkung.",
+  },
+  {
+    label: "Zeitlogik",
+    seminar: "kompakt und fokussiert.",
+    development: "mehrstufig und auf Nachhaltigkeit ausgelegt.",
+    coaching: "punktuell, verdichtet und eng an realen Fällen.",
+  },
+]
+
+const proofQuote = {
+  eyebrow: "Stimme aus der Praxis",
+  quote:
+    "Deine Techniken kann ich nicht nur beruflich, sondern auch privat anwenden. Besonders die Tipps zur Konfliktlösung, aber auch generell die Wirkung der eigenen Sprache, sind unfassbar hilfreich.",
+  author: "Maximilian Sebald",
+  role: "Junior Commercial Program Manager, RAUMEDIC AG",
+  context: "Empfohlene Zuordnung laut Arbeitsdokument: Themen & Veranstaltungsformen sowie Führung/Konflikt.",
+}
+
 export const metadata: Metadata = {
   title: "Themen & Formate | Grossmann Training",
   description:
@@ -182,9 +212,12 @@ export default function ThemenFormatePage() {
               <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">Zwischenschritt</p>
+                  <h3 className="mt-3 max-w-2xl font-display text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-[2rem]">
+                    Oft reichen 15 Minuten, um das passende Format sauber einzugrenzen.
+                  </h3>
                   <p className="mt-3 max-w-2xl text-[15px] leading-8 text-muted-foreground">
                     Wenn schnell geklärt werden soll, ob eher Seminar, Teamformat oder ein kompakter 1:1-Rahmen passt,
-                    reicht oft ein kurzes Erstgespräch.
+                    reicht meist ein kurzes Erstgespräch mit Blick auf Alltag, Zielgruppe und gewünschte Wirkung.
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row">
@@ -195,6 +228,48 @@ export default function ThemenFormatePage() {
                     Praxisbeispiele ansehen
                   </Link>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border/70 bg-white py-18 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+              <div>
+                <SectionEyebrow>Formatvergleich</SectionEyebrow>
+                <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
+                  Woran sich ein Seminar, ein Entwicklungsformat oder Coaching unterscheiden
+                </h2>
+                <p className="mt-5 max-w-xl text-[15px] leading-8 text-muted-foreground">
+                  Nicht jede Situation verlangt dieselbe Tiefe. Diese Gegenüberstellung hilft dabei, schneller zu
+                  erkennen, welches Format zur Ausgangslage passt.
+                </p>
+              </div>
+
+              <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_18px_55px_rgba(16,33,43,0.05)]">
+                <div className="grid border-b border-border/70 bg-[#fcfbf8] md:grid-cols-[0.8fr_1fr_1fr_1fr]">
+                  <div className="px-5 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/72">
+                    Orientierung
+                  </div>
+                  <div className="px-5 py-4 text-sm font-semibold text-foreground">Seminar</div>
+                  <div className="px-5 py-4 text-sm font-semibold text-foreground">Team- & Niederlassungsentwicklung</div>
+                  <div className="px-5 py-4 text-sm font-semibold text-foreground">Coaching</div>
+                </div>
+
+                {comparisonRows.map((row, index) => (
+                  <div
+                    key={row.label}
+                    className={`grid gap-px bg-border/70 md:grid-cols-[0.8fr_1fr_1fr_1fr] ${index === comparisonRows.length - 1 ? "" : "border-b border-border/70"}`}
+                  >
+                    <div className="bg-white px-5 py-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">
+                      {row.label}
+                    </div>
+                    <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">{row.seminar}</div>
+                    <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">{row.development}</div>
+                    <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">{row.coaching}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -223,6 +298,33 @@ export default function ThemenFormatePage() {
                   <p className="mt-4 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-10 overflow-hidden rounded-[30px] border border-border/70 bg-[#fcfbf8] shadow-[0_18px_55px_rgba(16,33,43,0.05)]">
+              <div className="grid gap-6 p-7 sm:p-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">{proofQuote.eyebrow}</p>
+                  <blockquote className="mt-5 font-display text-[1.55rem] font-light italic leading-[1.6] text-foreground/82 sm:text-[1.8rem]">
+                    "{proofQuote.quote}"
+                  </blockquote>
+                </div>
+                <div className="flex h-full flex-col justify-between">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground/76">{proofQuote.author}</p>
+                    <p className="mt-2 text-sm leading-7 text-muted-foreground">{proofQuote.role}</p>
+                    <p className="mt-5 text-sm leading-7 text-muted-foreground">{proofQuote.context}</p>
+                  </div>
+                  <div className="mt-6">
+                    <Link
+                      href="/referenzen-stimmen"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
+                    >
+                      Weitere Stimmen ansehen
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
