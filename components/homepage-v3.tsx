@@ -145,7 +145,7 @@ export default function HomepageV3() {
                 alt="Trainingssituation mit Bernd Grossmann und Teilnehmenden im technischen Umfeld"
                 fill
                 priority
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="100vw"
               />
             </div>
