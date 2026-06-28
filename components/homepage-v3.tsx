@@ -416,7 +416,7 @@ export default function HomepageV3() {
           <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_25px_75px_rgba(16,33,43,0.08)]">
             <div className="relative aspect-[4/5] min-h-[340px]">
               <Image
-                src="/images/grossmann/home-about-bernd-welcome-board.jpeg"
+                src="/images/grossmann/reserve-faq-bernd-speaking.jpeg"
                 alt="Bernd Grossmann vor einer Trainingsvisualisierung"
                 fill
                 className="object-cover"
