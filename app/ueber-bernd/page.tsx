@@ -27,8 +27,8 @@ export default function UeberBerndPage() {
               <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_25px_75px_rgba(16,33,43,0.08)]">
                 <div className="relative aspect-[4/5] min-h-[360px]">
                   <Image
-                    src="/images/photo-placeholder.svg"
-                    alt="Platzhalter für Bernd Grossmann Portrait"
+                    src="/images/grossmann/about-bernd-michael-grinder.jpg"
+                    alt="Bernd Grossmann mit Michael Grinder"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 45vw"

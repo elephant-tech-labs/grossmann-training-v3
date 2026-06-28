@@ -9,6 +9,8 @@ const cases = [
   {
     id: "siemens",
     title: "Siemens AG",
+    imageSrc: "/images/grossmann/home-case-technical-discussion.jpg",
+    imageAlt: "Diskussions- und Arbeitsszene aus einem technischen Seminarumfeld",
     subtitle: "Wenn technische Exzellenz plötzlich Verhandlungskompetenz braucht",
     intro:
       "Ein Gründungskapitel von Grossmann Training. Im veränderten technischen Infrastrukturgeschäft reichte technische Stärke allein nicht mehr aus, um Aufträge zu sichern.",
@@ -26,6 +28,8 @@ const cases = [
   {
     id: "service",
     title: "Servicetechniker im Kundenkontakt",
+    imageSrc: "/images/grossmann/service-seminar-team-photo.png",
+    imageAlt: "Bernd Grossmann mit Teilnehmenden aus dem Serviceumfeld nach einem Seminar",
     subtitle: "Techniker werden zu Botschaftern zwischen Technik, Betrieb und Kunde",
     intro:
       "Servicetechniker und Monteure sind oft die sichtbarsten Vertreter eines technischen Unternehmens beim Kunden.",
@@ -41,6 +45,8 @@ const cases = [
   {
     id: "fuehrung",
     title: "Bauleiter & technische Führungskräfte",
+    imageSrc: "/images/grossmann/practice-leadership-seminar-board.jpg",
+    imageAlt: "Bernd Grossmann vor einer Seminarübersicht für technische Führung und Gesprächsführung",
     subtitle: "Technische Stärke in Führungswirkung übersetzen",
     intro: "Führung im technischen Alltag bedeutet oft Führung unter Druck.",
     situation: "Bauleiter und Führungskräfte koordinieren Menschen, Unternehmen und Gewerke und prägen Kultur und Zusammenarbeit.",
@@ -55,6 +61,8 @@ const cases = [
   {
     id: "teams",
     title: "Team- & Niederlassungsentwicklung",
+    imageSrc: "/images/grossmann/practice-team-workshop-discussion.jpg",
+    imageAlt: "Diskussion und Gruppenarbeit in einem Workshop zur Team- und Niederlassungsentwicklung",
     subtitle: "Vom Einzeltraining zum Entwicklungsprogramm",
     intro: "Viele technische Organisationen arbeiten mit einzelnen Seminaren. Der Alltag ist jedoch komplexer.",
     situation: "Service, Innendienst, Außendienst, Projektleitung, Führung und Kunde greifen ineinander.",
@@ -69,6 +77,8 @@ const cases = [
   {
     id: "schnittstellen",
     title: "Zusammenarbeit Innen- und Außendienst",
+    imageSrc: "/images/grossmann/practice-internal-external-dialogue.jpeg",
+    imageAlt: "Dialogszene aus einem Workshop zur Zusammenarbeit zwischen Innen- und Außendienst",
     subtitle: "Wenn Service, Projekt und Vertrieb dieselbe Sprache brauchen",
     intro:
       "In technischen Unternehmen entstehen viele Reibungsverluste nicht beim Kunden, sondern intern.",
@@ -110,8 +120,8 @@ export default function PraxisbeispielePage() {
                 <div className={`grid ${index === 0 ? "lg:grid-cols-[1.05fr_0.95fr]" : "lg:grid-cols-[0.95fr_1.05fr]"}`}>
                   <div className={`relative min-h-[320px] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                     <Image
-                      src="/images/photo-placeholder.svg"
-                      alt={`Platzhalter für ${item.title}`}
+                      src={item.imageSrc}
+                      alt={item.imageAlt}
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
