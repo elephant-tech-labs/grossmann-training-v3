@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, BriefcaseBusiness, Building2, MessageSquareText, Phone, ShieldCheck, Wrench } from "lucide-react"
 import SectionEyebrow from "@/components/section-eyebrow"
-// to
+
 const audiences = [
   {
     title: "Servicetechniker & Monteure",
