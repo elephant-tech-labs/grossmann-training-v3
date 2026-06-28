@@ -9,8 +9,8 @@ const cases = [
   {
     id: "siemens",
     title: "Siemens AG",
-    imageSrc: "/images/grossmann/home-case-siemens-negotiation.png",
-    imageAlt: "Trainingssituation aus Verhandlungs- und Argumentationstraining im technischen Umfeld",
+    imageSrc: "/images/grossmann/home-case-technical-discussion.jpg",
+    imageAlt: "Diskussions- und Arbeitsszene aus einem technischen Seminarumfeld",
     subtitle: "Wenn technische Exzellenz plötzlich Verhandlungskompetenz braucht",
     intro:
       "Ein Gründungskapitel von Grossmann Training. Im veränderten technischen Infrastrukturgeschäft reichte technische Stärke allein nicht mehr aus, um Aufträge zu sichern.",
@@ -28,8 +28,8 @@ const cases = [
   {
     id: "service",
     title: "Servicetechniker im Kundenkontakt",
-    imageSrc: "/images/grossmann/service-customer-contact-team.png",
-    imageAlt: "Bernd Grossmann mit Teilnehmenden aus dem Serviceumfeld nach einem Training",
+    imageSrc: "/images/grossmann/service-seminar-team-photo.png",
+    imageAlt: "Bernd Grossmann mit Teilnehmenden aus dem Serviceumfeld nach einem Seminar",
     subtitle: "Techniker werden zu Botschaftern zwischen Technik, Betrieb und Kunde",
     intro:
       "Servicetechniker und Monteure sind oft die sichtbarsten Vertreter eines technischen Unternehmens beim Kunden.",
@@ -61,8 +61,8 @@ const cases = [
   {
     id: "teams",
     title: "Team- & Niederlassungsentwicklung",
-    imageSrc: "/images/grossmann/practice-team-development-group.jpg",
-    imageAlt: "Gruppenbild aus einem Seminar zur Team- und Niederlassungsentwicklung",
+    imageSrc: "/images/grossmann/practice-team-workshop-discussion.jpg",
+    imageAlt: "Diskussion und Gruppenarbeit in einem Workshop zur Team- und Niederlassungsentwicklung",
     subtitle: "Vom Einzeltraining zum Entwicklungsprogramm",
     intro: "Viele technische Organisationen arbeiten mit einzelnen Seminaren. Der Alltag ist jedoch komplexer.",
     situation: "Service, Innendienst, Außendienst, Projektleitung, Führung und Kunde greifen ineinander.",
@@ -77,8 +77,8 @@ const cases = [
   {
     id: "schnittstellen",
     title: "Zusammenarbeit Innen- und Außendienst",
-    imageSrc: "/images/grossmann/practice-internal-external-collaboration.jpeg",
-    imageAlt: "Gesprächsszene aus einem Workshop zur Zusammenarbeit zwischen Innen- und Außendienst",
+    imageSrc: "/images/grossmann/practice-internal-external-dialogue.jpeg",
+    imageAlt: "Dialogszene aus einem Workshop zur Zusammenarbeit zwischen Innen- und Außendienst",
     subtitle: "Wenn Service, Projekt und Vertrieb dieselbe Sprache brauchen",
     intro:
       "In technischen Unternehmen entstehen viele Reibungsverluste nicht beim Kunden, sondern intern.",

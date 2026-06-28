@@ -288,8 +288,8 @@ export default function HomepageV3() {
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative min-h-[320px]">
                 <Image
-                  src="/images/grossmann/home-case-siemens-negotiation.png"
-                  alt="Trainingssituation aus Verhandlungs- und Argumentationstraining im technischen Umfeld"
+                  src="/images/grossmann/home-case-technical-discussion.jpg"
+                  alt="Diskussions- und Arbeitsszene aus einem technischen Seminarumfeld"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 55vw"
@@ -416,8 +416,8 @@ export default function HomepageV3() {
           <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_25px_75px_rgba(16,33,43,0.08)]">
             <div className="relative aspect-[4/5] min-h-[340px]">
               <Image
-                src="/images/grossmann/home-about-bernd-method.jpg"
-                alt="Bernd Grossmann in einer methodischen Trainingssituation am Flipchart"
+                src="/images/grossmann/home-about-bernd-welcome-board.jpeg"
+                alt="Bernd Grossmann vor einer Trainingsvisualisierung"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"

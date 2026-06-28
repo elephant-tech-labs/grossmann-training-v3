@@ -143,7 +143,7 @@ export default function ServiceTechPage() {
             <div className="overflow-hidden rounded-[32px] border border-border/70 bg-white shadow-[0_25px_80px_rgba(16,33,43,0.08)]">
               <div className="relative aspect-[4/3] min-h-[260px] sm:aspect-[16/10]">
                 <Image
-                  src="/images/grossmann/service-technicians-training-board.png"
+                  src="/images/grossmann/service-training-flipchart-scene.png"
                   alt="Bernd Grossmann mit Servicetechnikern in einer Trainingssituation am Flipchart"
                   fill
                   className="object-cover"
@@ -313,8 +313,8 @@ export default function ServiceTechPage() {
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative min-h-[320px]">
                 <Image
-                  src="/images/grossmann/service-customer-contact-team.png"
-                  alt="Servicetechniker und Teilnehmende in einer Kundenkontakt-Trainingssituation"
+                  src="/images/grossmann/service-seminar-team-photo.png"
+                  alt="Bernd Grossmann mit Teilnehmenden aus einem Servicetechniker-Seminar"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 55vw"
