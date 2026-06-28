@@ -78,7 +78,7 @@ export default function UeberBerndPage() {
                     src="/images/grossmann/reserve-contact-bernd-grossmann.png"
                     alt="Bernd Grossmann in einem Porträt aus dem Trainingskontext"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[20%_center]"
                     sizes="(max-width: 1024px) 100vw, 45vw"
                   />
                 </div>
