@@ -141,8 +141,8 @@ export default function HomepageV3() {
           <div className="mt-10 overflow-hidden rounded-[32px] border border-border/70 bg-white shadow-[0_28px_85px_rgba(16,33,43,0.08)]">
             <div className="relative aspect-[4/3] min-h-[240px] sm:aspect-[21/9] sm:min-h-[300px]">
               <Image
-                src="/images/photo-placeholder.svg"
-                alt="Seminarsituation mit Bernd Grossmann und Teilnehmern in technischem Umfeld"
+                src="/images/grossmann/home-hero-training-room.jpg"
+                alt="Trainingssituation mit Bernd Grossmann und Teilnehmenden im technischen Umfeld"
                 fill
                 priority
                 className="object-cover"
@@ -288,8 +288,8 @@ export default function HomepageV3() {
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative min-h-[320px]">
                 <Image
-                  src="/images/photo-placeholder.svg"
-                  alt="Platzhalter für Siemens Praxisbeispiel"
+                  src="/images/grossmann/home-case-siemens-negotiation.png"
+                  alt="Trainingssituation aus Verhandlungs- und Argumentationstraining im technischen Umfeld"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 55vw"
@@ -416,8 +416,8 @@ export default function HomepageV3() {
           <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_25px_75px_rgba(16,33,43,0.08)]">
             <div className="relative aspect-[4/5] min-h-[340px]">
               <Image
-                src="/images/photo-placeholder.svg"
-                alt="Platzhalter für Bernd Grossmann Portrait oder Trainingscollage"
+                src="/images/grossmann/home-about-bernd-method.jpg"
+                alt="Bernd Grossmann in einer methodischen Trainingssituation am Flipchart"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"
