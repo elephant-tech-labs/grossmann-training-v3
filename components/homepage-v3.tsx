@@ -145,7 +145,7 @@ export default function HomepageV3() {
                 alt="Trainingssituation mit Bernd Grossmann und Teilnehmenden im technischen Umfeld"
                 fill
                 priority
-                className="object-cover"
+                className="object-cover object-[center_20%]"
                 sizes="100vw"
               />
             </div>
@@ -288,7 +288,7 @@ export default function HomepageV3() {
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative min-h-[320px]">
                 <Image
-                  src="/images/grossmann/home-case-technical-discussion.jpg"
+                  src="/images/grossmann/practice-internal-external-dialogue.jpeg"
                   alt="Diskussions- und Arbeitsszene aus einem technischen Seminarumfeld"
                   fill
                   className="object-cover"
@@ -416,7 +416,7 @@ export default function HomepageV3() {
           <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_25px_75px_rgba(16,33,43,0.08)]">
             <div className="relative aspect-[4/5] min-h-[340px]">
               <Image
-                src="/images/grossmann/home-about-bernd-welcome-board.jpeg"
+                src="/images/grossmann/reserve-faq-bernd-speaking.jpeg"
                 alt="Bernd Grossmann vor einer Trainingsvisualisierung"
                 fill
                 className="object-cover"
