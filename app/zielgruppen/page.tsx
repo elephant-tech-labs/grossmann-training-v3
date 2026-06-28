@@ -174,15 +174,19 @@ export default function ZielgruppenPage() {
           body="Je nach Rolle, Verantwortung und Nähe zum Kunden braucht es einen anderen Schwerpunkt. Die Inhalte bleiben praxisnah, aber der Hebel ist nicht für jede Zielgruppe derselbe."
         />
 
-        <section className="border-b border-border/70 bg-white py-10 sm:py-12">
+        <section className="border-b border-border/70 bg-white py-12 sm:py-14">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+            <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
               <div>
                 <SectionEyebrow>Schnelle Orientierung</SectionEyebrow>
-                <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.7rem]">
+                <h2 className="mt-5 max-w-xl font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.85rem]">
                   Welche Rolle Ihrer Situation am ehesten entspricht
                 </h2>
-                <div className="mt-6 flex flex-wrap gap-3">
+                <p className="mt-4 max-w-lg text-[15px] leading-8 text-muted-foreground">
+                  Die Themen wirken nach außen ähnlich, der richtige Ansatz hängt aber stark davon ab, in welcher Rolle
+                  Menschen stehen und an welcher Stelle Wirkung verloren geht.
+                </p>
+                <div className="mt-7 flex flex-wrap gap-3">
                   {groups.map((group) => (
                     <Link
                       key={group.id}
@@ -195,11 +199,11 @@ export default function ZielgruppenPage() {
                 </div>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {overviewCards.map((item) => (
-                  <div key={item.label} className="rounded-[22px] border border-border/70 bg-[#fcfbf8] p-5">
+                  <div key={item.label} className="rounded-[24px] border border-border/70 bg-[#fcfbf8] p-6 shadow-[0_10px_30px_rgba(16,33,43,0.03)]">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.label}</p>
-                    <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.value}</p>
+                    <p className="mt-4 text-[15px] leading-7 text-muted-foreground">{item.value}</p>
                   </div>
                 ))}
               </div>
@@ -217,7 +221,7 @@ export default function ZielgruppenPage() {
                     id={group.id}
                     className="soft-card p-7 sm:p-9"
                   >
-                    <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
+                    <div className="grid gap-8 lg:grid-cols-[0.94fr_1.06fr]">
                       <div>
                         <div className="flex flex-wrap items-center gap-3">
                           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/66">
@@ -232,18 +236,18 @@ export default function ZielgruppenPage() {
                         </h2>
                         <p className="mt-5 max-w-xl text-[15px] leading-8 text-muted-foreground">{group.body}</p>
 
-                        <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                          <div className="rounded-[18px] border border-border/70 bg-[#fcfbf8] px-4 py-4">
+                        <div className="mt-7 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                          <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Typische Lage</p>
-                            <p className="mt-2 text-sm leading-6 text-muted-foreground">{group.situation}</p>
+                            <p className="mt-3 text-sm leading-7 text-muted-foreground">{group.situation}</p>
                           </div>
-                          <div className="rounded-[18px] border border-border/70 bg-[#fcfbf8] px-4 py-4">
+                          <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Nähe zum Kunden</p>
-                            <p className="mt-2 text-sm leading-6 text-muted-foreground">{group.proximity}</p>
+                            <p className="mt-3 text-sm leading-7 text-muted-foreground">{group.proximity}</p>
                           </div>
-                          <div className="rounded-[18px] border border-border/70 bg-[#fcfbf8] px-4 py-4">
+                          <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5 md:col-span-2 xl:col-span-1">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Passende Formate</p>
-                            <p className="mt-2 text-sm leading-6 text-muted-foreground">{group.formats}</p>
+                            <p className="mt-3 text-sm leading-7 text-muted-foreground">{group.formats}</p>
                           </div>
                         </div>
 
@@ -270,9 +274,12 @@ export default function ZielgruppenPage() {
 
                       <div className="white-card p-6 sm:p-7">
                         <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">Schwerpunkte</p>
-                        <ul className="mt-6 space-y-3 text-[15px] leading-8 text-muted-foreground">
+                        <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                          Typische Arbeitsschwerpunkte, die in dieser Rolle im Alltag besonders wirksam werden.
+                        </p>
+                        <ul className="mt-5 space-y-0 text-[15px] leading-8 text-muted-foreground">
                           {group.bullets.map((item) => (
-                            <li key={item} className="border-b border-border/60 pb-3 last:border-b-0 last:pb-0">
+                            <li key={item} className="border-b border-border/60 py-3 first:pt-0 last:border-b-0 last:pb-0">
                               {item}
                             </li>
                           ))}
@@ -282,24 +289,37 @@ export default function ZielgruppenPage() {
                   </section>
 
                   {index === 2 ? (
-                    <section className="rounded-[28px] border border-border/70 bg-[#fcfbf8] px-6 py-7 shadow-[0_12px_35px_rgba(16,33,43,0.04)] sm:px-8">
-                      <div className="grid gap-5 lg:grid-cols-2">
-                        {bridgeLinks.map((item) => (
-                          <div key={item.title} className="rounded-[22px] border border-border/70 bg-white p-5 sm:p-6">
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">Brücke zum nächsten Schritt</p>
-                            <h3 className="mt-4 font-display text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground">
-                              {item.title}
-                            </h3>
-                            <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.body}</p>
-                            <Link
-                              href={item.href}
-                              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
-                            >
-                              {item.label}
-                              <ArrowRight className="h-4 w-4" />
-                            </Link>
-                          </div>
-                        ))}
+                    <section className="rounded-[30px] border border-border/70 bg-[#fcfbf8] px-6 py-8 shadow-[0_12px_35px_rgba(16,33,43,0.04)] sm:px-8">
+                      <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+                        <div>
+                          <SectionEyebrow>Brücke zum nächsten Schritt</SectionEyebrow>
+                          <h3 className="mt-5 max-w-lg font-display text-3xl font-light leading-tight tracking-[-0.03em] text-foreground sm:text-[2.35rem]">
+                            Wenn die Rolle klar ist, folgen meist Format oder Praxisbeispiel.
+                          </h3>
+                          <p className="mt-4 max-w-xl text-[15px] leading-8 text-muted-foreground">
+                            Manche Besucher wollen zuerst wissen, in welcher Form das sinnvoll ist. Andere möchten
+                            zuerst sehen, wie vergleichbare Situationen praktisch bearbeitet wurden.
+                          </p>
+                        </div>
+
+                        <div className="grid gap-5 lg:grid-cols-2">
+                          {bridgeLinks.map((item) => (
+                            <div key={item.title} className="rounded-[22px] border border-border/70 bg-white p-5 sm:p-6">
+                              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">Nächster Blick</p>
+                              <h3 className="mt-4 font-display text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground">
+                                {item.title}
+                              </h3>
+                              <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.body}</p>
+                              <Link
+                                href={item.href}
+                                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
+                              >
+                                {item.label}
+                                <ArrowRight className="h-4 w-4" />
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </section>
                   ) : null}
