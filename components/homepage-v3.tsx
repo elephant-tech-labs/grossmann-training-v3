@@ -288,7 +288,7 @@ export default function HomepageV3() {
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative min-h-[320px]">
                 <Image
-                  src="/images/grossmann/home-case-technical-discussion.jpg"
+                  src="/images/grossmann/practice-internal-external-dialogue.jpg"
                   alt="Diskussions- und Arbeitsszene aus einem technischen Seminarumfeld"
                   fill
                   className="object-cover"
