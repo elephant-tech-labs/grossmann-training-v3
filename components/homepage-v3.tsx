@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, BriefcaseBusiness, Building2, MessageSquareText, Phone, ShieldCheck, Wrench } from "lucide-react"
 import SectionEyebrow from "@/components/section-eyebrow"
+import VideoTestimonial from "@/components/video-testimonial"
 
 const audiences = [
   {
@@ -519,7 +520,31 @@ export default function HomepageV3() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="mt-12 grid gap-6 lg:grid-cols-[1.32fr_0.68fr] lg:items-stretch">
+            <VideoTestimonial compact />
+
+            <div className="flex flex-col justify-center rounded-[28px] border border-border/70 bg-white p-7 shadow-[0_18px_55px_rgba(16,33,43,0.06)] sm:p-8">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">Videostimme</p>
+              <h3 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] text-foreground">
+                Wirkung wird glaubwürdig, wenn Teilnehmer selbst berichten.
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                Eine persönliche Stimme aus einem Training für Techniker im Kundenkontakt.
+              </p>
+              <p className="mt-4 text-xs leading-6 text-muted-foreground/70">
+                Mit dem Abspielen wird eine Verbindung zu YouTube hergestellt.
+              </p>
+              <Link
+                href="/referenzen-stimmen"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
+              >
+                Weitere Stimmen ansehen
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             {testimonials.map((item, index) => (
               <article
                 key={item.author}

@@ -6,6 +6,7 @@ import PageCtaPanel from "@/components/page-cta-panel"
 import PageHero from "@/components/page-hero"
 import SectionEyebrow from "@/components/section-eyebrow"
 import SiteShell from "@/components/site-shell"
+import VideoTestimonial from "@/components/video-testimonial"
 
 const proofSignals = [
   {
@@ -164,6 +165,31 @@ export default function ReferenzenStimmenPage() {
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.body}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border/70 bg-[#fbfaf6] py-18 sm:py-24" aria-labelledby="video-testimonial-heading">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:gap-14">
+              <div>
+                <SectionEyebrow>Teilnehmerstimme im Video</SectionEyebrow>
+                <h2
+                  id="video-testimonial-heading"
+                  className="mt-5 max-w-xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl"
+                >
+                  Eine persönliche Stimme direkt aus der Praxis
+                </h2>
+                <p className="mt-6 max-w-xl text-[15px] leading-8 text-muted-foreground">
+                  Ein Teilnehmer schildert mit eigenen Worten, wie er das Training für Techniker im Kundenkontakt
+                  erlebt hat. Ungefiltert, persönlich und unmittelbar nach der gemeinsamen Arbeit.
+                </p>
+                <p className="mt-5 text-xs leading-6 text-muted-foreground/72">
+                  Mit dem Abspielen wird eine Verbindung zu YouTube hergestellt.
+                </p>
+              </div>
+
+              <VideoTestimonial />
             </div>
           </div>
         </section>
