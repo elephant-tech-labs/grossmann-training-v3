@@ -130,7 +130,7 @@ export default function HomepageV3() {
 
             <div className="lg:col-span-4 lg:pt-10">
               <div className="soft-card p-6 sm:p-7">
-                <p className="max-w-sm text-[15px] leading-8 text-muted-foreground">
+                <p className="max-w-sm text-base leading-8 text-muted-foreground">
                   Grossmann Training unterstützt Menschen und Organisationen dort, wo Technik auf Kunden, Führung und
                   Zusammenarbeit trifft. Technische Kompetenz schafft Leistung. Kommunikation schafft Wirkung.
                 </p>
@@ -144,7 +144,7 @@ export default function HomepageV3() {
                   </Link>
                 </div>
 
-                <div className="mt-7 border-t border-border/70 pt-4 text-[11px] uppercase tracking-[0.2em] text-muted-foreground/78">
+                <div className="mt-7 border-t border-border/70 pt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
                   Seit 1994 · FM/TGA · Technischer Kundendienst · Technische Führung
                 </div>
               </div>
@@ -184,7 +184,7 @@ export default function HomepageV3() {
               {clientLogos.map((client) => (
                 <div
                   key={client}
-                  className="flex min-h-12 items-center justify-start rounded-2xl border border-border/70 bg-[#fcfbf8] px-4 py-3 text-sm font-semibold tracking-[0.12em] text-foreground/62 sm:justify-center"
+                  className="flex min-h-12 items-center justify-start rounded-2xl border border-border/70 bg-[#fcfbf8] px-4 py-3 text-sm font-semibold tracking-[0.12em] text-foreground/72 sm:justify-center"
                 >
                   {client}
                 </div>
@@ -192,17 +192,17 @@ export default function HomepageV3() {
             </div>
 
             <div className="soft-card px-5 py-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
                 {homepageProof.eyebrow}
               </p>
               <blockquote className="mt-3 text-sm leading-7 text-foreground/82">
                 „{homepageProof.quote}“
               </blockquote>
-              <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground/72">
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                 {homepageProof.author} · {homepageProof.role}
               </p>
               <div className="mt-4 rounded-[18px] border border-border/70 bg-white/75 px-4 py-3">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                   {homepageProof.proofLabel}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-foreground/82">{homepageProof.proofValue}</p>
@@ -225,7 +225,7 @@ export default function HomepageV3() {
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="max-w-md text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-md text-base leading-8 text-muted-foreground">
                 Das Angebot ist nach Zielgruppen und typischen Anforderungen aufgebaut. So wird schnell sichtbar, was
                 in Ihrer Situation wirklich weiterhilft.
               </p>
@@ -247,7 +247,7 @@ export default function HomepageV3() {
                   <h3 className="mt-7 max-w-xs font-display text-2xl font-medium leading-snug text-foreground">
                     {item.title}
                   </h3>
-                  <p className="mt-4 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
+                  <p className="mt-4 text-base leading-8 text-muted-foreground">{item.body}</p>
                   <span className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold text-primary">
                     Mehr erfahren
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -272,7 +272,7 @@ export default function HomepageV3() {
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="max-w-md text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-md text-base leading-8 text-muted-foreground">
                 Viele Herausforderungen in Service, Führung und Zusammenarbeit sind keine Fachprobleme. Sie entstehen
                 dort, wo Menschen erklären, abstimmen, führen, deeskalieren und Vertrauen sichern müssen.
               </p>
@@ -284,7 +284,7 @@ export default function HomepageV3() {
               <div key={item.number} className="rounded-[28px] border border-white/65 bg-white/55 p-6 shadow-[0_12px_35px_rgba(16,33,43,0.03)] backdrop-blur-sm sm:p-7">
                 <p className="font-display text-4xl font-light text-primary/40">{item.number}</p>
                 <h3 className="mt-4 font-display text-[1.7rem] font-medium leading-snug text-foreground">{item.title}</h3>
-                <p className="mt-4 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
+                <p className="mt-4 text-base leading-8 text-muted-foreground">{item.body}</p>
               </div>
             ))}
           </div>
@@ -301,7 +301,7 @@ export default function HomepageV3() {
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="max-w-md text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-md text-base leading-8 text-muted-foreground">
                 Ein Gründungskapitel von Grossmann Training: Wenn technische Exzellenz plötzlich
                 Verhandlungskompetenz braucht.
               </p>
@@ -320,27 +320,27 @@ export default function HomepageV3() {
                 />
               </div>
               <div className="p-8 sm:p-10 lg:p-12">
-                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground/74">Kontext</p>
-                <p className="mt-3 text-[15px] leading-8 text-muted-foreground">
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Kontext</p>
+                <p className="mt-3 text-base leading-8 text-muted-foreground">
                   Neue Einkaufs- und Wettbewerbsstrukturen machten im technischen Infrastrukturgeschäft deutlich, dass
                   technische Stärke allein nicht mehr automatisch zum Auftrag führt.
                 </p>
 
                 <div className="mt-8 grid gap-5 sm:grid-cols-2">
                   <div className="rounded-[24px] border border-border/70 bg-[#faf8f3] p-5">
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Herausforderung</p>
+                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Herausforderung</p>
                     <p className="mt-3 text-sm leading-7 text-muted-foreground">
                       Technische Kompetenz in Nutzenargumentation, Verhandlung und neue Gesprächssituationen übersetzen.
                     </p>
                   </div>
                   <div className="rounded-[24px] border border-border/70 bg-[#faf8f3] p-5">
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Vorgehen</p>
+                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Vorgehen</p>
                     <p className="mt-3 text-sm leading-7 text-muted-foreground">
                       Entwicklungsprogramm zu Verhandlungsführung, Argumentation und kundenorientierter Gesprächslogik.
                     </p>
                   </div>
                   <div className="rounded-[24px] border border-border/70 bg-[#faf8f3] p-5 sm:col-span-2">
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Wirkung</p>
+                    <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Wirkung</p>
                     <p className="mt-3 text-sm leading-7 text-muted-foreground">
                       Das Projekt zeigt bis heute eine Grundüberzeugung von Grossmann Training: Technik schafft
                       Leistung. Kommunikation schafft Wirkung.
@@ -379,7 +379,7 @@ export default function HomepageV3() {
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="max-w-md text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-md text-base leading-8 text-muted-foreground">
                 Vom technischen Service bis zur Führung im Projekt- und Niederlassungsalltag. Die Themen sind
                 anschlussfähig an reale Situationen, nicht an Lehrbuchfälle.
               </p>
@@ -390,7 +390,7 @@ export default function HomepageV3() {
             {workAreas.map((item) => (
               <div key={item.title} className="white-card p-6 sm:p-8">
                 <h3 className="font-display text-2xl font-medium leading-snug text-foreground">{item.title}</h3>
-                <p className="mt-4 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
+                <p className="mt-4 text-base leading-8 text-muted-foreground">{item.body}</p>
               </div>
             ))}
           </div>
@@ -417,7 +417,7 @@ export default function HomepageV3() {
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="max-w-md text-[15px] leading-8 text-white/70">
+              <p className="max-w-md text-base leading-8 text-white/82">
                 Nicht als Theoriepaket, sondern als nachvollziehbare Entwicklung entlang der Praxis.
               </p>
             </div>
@@ -426,9 +426,9 @@ export default function HomepageV3() {
           <div className="mt-12 grid gap-5 lg:grid-cols-3 lg:gap-6">
             {methodSteps.map((item, index) => (
               <div key={item.title} className="rounded-[30px] border border-white/10 bg-white/4 p-6 backdrop-blur sm:p-8">
-                <p className="text-xs uppercase tracking-[0.18em] text-white/52">0{index + 1}</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-white/70">0{index + 1}</p>
                 <h3 className="mt-5 font-display text-2xl font-medium text-white">{item.title}</h3>
-                <p className="mt-4 text-[15px] leading-8 text-white/68">{item.body}</p>
+                <p className="mt-4 text-base leading-8 text-white/82">{item.body}</p>
               </div>
             ))}
           </div>
@@ -460,7 +460,7 @@ export default function HomepageV3() {
             >
               Seit 1994 arbeitet Bernd Grossmann mit Service- und Führungsteams in technischen Umfeldern.
             </h2>
-            <p className="mt-6 max-w-2xl text-[15px] leading-8 text-muted-foreground">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground">
               Sein Fokus liegt auf Kommunikation, Wirkung und Zusammenarbeit dort, wo technische Exzellenz allein
               nicht ausreicht. Hintergrund und Arbeitsweise verbinden wirtschaftliche Praxis, Sozialpsychologie und
               hohe Nähe zu realen technischen Situationen.
@@ -468,19 +468,19 @@ export default function HomepageV3() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="soft-card p-5">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Seit 1994</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Seit 1994</p>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   Arbeit mit Service- und Führungsteams in technischen Umfeldern.
                 </p>
               </div>
               <div className="soft-card p-5">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Praxisnähe</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Praxisnähe</p>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   Technischer Alltag, Kundensituationen, Führung und Zusammenarbeit als Ausgangspunkt.
                 </p>
               </div>
               <div className="soft-card p-5">
-                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Arbeitsweise</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Arbeitsweise</p>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   Nicht theoretisch-abgehoben, sondern anschlussfähig an reale Situationen.
                 </p>
@@ -513,7 +513,7 @@ export default function HomepageV3() {
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="max-w-md text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-md text-base leading-8 text-muted-foreground">
                 Praktisch, ruhig und anschlussfähig an den Alltag. Die stärksten Stimmen kommen genau von dort, wo
                 technische Realität und Kundenkontakt täglich zusammenkommen.
               </p>
@@ -524,14 +524,14 @@ export default function HomepageV3() {
             <VideoTestimonial compact />
 
             <div className="flex flex-col justify-center rounded-[28px] border border-border/70 bg-white p-7 shadow-[0_18px_55px_rgba(16,33,43,0.06)] sm:p-8">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">Videostimme</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Videostimme</p>
               <h3 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] text-foreground">
                 Wirkung wird glaubwürdig, wenn Teilnehmer selbst berichten.
               </h3>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">
                 Eine persönliche Stimme aus einem Training für Techniker im Kundenkontakt.
               </p>
-              <p className="mt-4 text-xs leading-6 text-muted-foreground/70">
+              <p className="mt-4 text-xs leading-6 text-muted-foreground">
                 Mit dem Abspielen wird eine Verbindung zu YouTube hergestellt.
               </p>
               <Link
@@ -552,11 +552,11 @@ export default function HomepageV3() {
                   index === 0 ? "bg-white shadow-[0_18px_55px_rgba(16,33,43,0.06)]" : "bg-[#faf8f3] lg:mt-10"
                 }`}
               >
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.title}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.title}</p>
                 <p className="font-display text-[clamp(1.2rem,2vw,1.8rem)] font-light italic leading-[1.65] text-foreground/80">
                   „{item.quote}“
                 </p>
-                <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground/78">
+                <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
                   {item.author} · {item.role} · {item.company}
                 </p>
               </article>
@@ -583,7 +583,7 @@ export default function HomepageV3() {
               <h2 className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] text-white sm:text-5xl">
                 Lassen Sie uns klären, was in Ihrer Situation wirklich weiterhilft.
               </h2>
-              <p className="mt-5 max-w-2xl text-[15px] leading-8 text-white/72">
+              <p className="mt-5 max-w-2xl text-base leading-8 text-white/82">
                 Im ersten Gespräch schauen wir gemeinsam auf Zielgruppe, Ausgangslage und das passende Format. So wird
                 schnell sichtbar, welche Form der Zusammenarbeit sinnvoll ist.
               </p>

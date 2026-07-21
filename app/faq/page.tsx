@@ -151,8 +151,8 @@ export default function FaqPage() {
               <div className="grid gap-4 sm:grid-cols-3">
                 {faqOverview.map((item) => (
                   <div key={item.label} className="rounded-[24px] border border-border/70 bg-[#fcfbf8] p-6 shadow-[0_10px_30px_rgba(16,33,43,0.03)]">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.label}</p>
-                    <p className="mt-4 text-[15px] leading-7 text-muted-foreground">{item.value}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.label}</p>
+                    <p className="mt-4 text-base leading-7 text-muted-foreground">{item.value}</p>
                   </div>
                 ))}
               </div>
@@ -168,28 +168,28 @@ export default function FaqPage() {
                 id={group.id}
                 className={`rounded-[30px] border border-border/70 p-6 shadow-[0_12px_35px_rgba(16,33,43,0.04)] sm:p-8 ${groupIndex === 0 ? "bg-[#fcfbf8]" : "bg-white"}`}
               >
-                <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-                  <div>
+                <div className="grid min-w-0 gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+                  <div className="min-w-0">
                     <SectionEyebrow>{group.title}</SectionEyebrow>
-                    <p className="mt-5 max-w-xl text-[15px] leading-8 text-muted-foreground">{group.body}</p>
+                    <p className="mt-5 max-w-xl text-base leading-8 text-muted-foreground">{group.body}</p>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="min-w-0 space-y-4">
                     {group.items.map((item, itemIndex) => (
                       <details
                         key={item.question}
                         open={groupIndex === 0 && itemIndex === 0}
                         className="group rounded-[26px] border border-border/70 bg-white p-6 open:bg-[#fffdfa] sm:p-7"
                       >
-                        <summary className="flex cursor-pointer list-none items-start justify-between gap-4">
-                          <div>
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">
+                        <summary className="flex min-w-0 cursor-pointer list-none items-start justify-between gap-4">
+                          <div className="min-w-0">
+                            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
                               Kurzantwort
                             </p>
-                            <h3 className="mt-3 font-display text-2xl font-medium leading-snug text-foreground sm:text-[1.85rem]">
+                            <h3 className="mt-3 font-display text-2xl font-medium leading-snug text-foreground [overflow-wrap:anywhere] sm:text-[1.85rem]">
                               {item.question}
                             </h3>
-                            <p className="mt-4 max-w-3xl text-[15px] leading-7 text-muted-foreground">
+                            <p className="mt-4 max-w-3xl text-base leading-7 text-muted-foreground">
                               {item.shortAnswer}
                             </p>
                           </div>
@@ -199,7 +199,7 @@ export default function FaqPage() {
                         </summary>
 
                         <div className="mt-5 border-t border-border/60 pt-5">
-                          <p className="max-w-3xl text-[15px] leading-8 text-muted-foreground">{item.answer}</p>
+                          <p className="max-w-3xl text-base leading-8 text-muted-foreground">{item.answer}</p>
                           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                             {item.links.map((link) => (
                               <Link

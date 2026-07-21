@@ -44,7 +44,7 @@ export default function ContactPage() {
                 <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-4xl">
                   Schnell und unkompliziert zum Erstgespräch
                 </h2>
-                <p className="mt-5 max-w-md text-[15px] leading-8 text-muted-foreground">
+                <p className="mt-5 max-w-md text-base leading-8 text-muted-foreground">
                   Wenn Sie lieber direkt schreiben oder anrufen möchten, können Sie genau das tun. Der Kontakt soll so
                   einfach sein wie das erste Sortieren Ihrer Situation.
                 </p>
@@ -84,12 +84,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8 rounded-[24px] border border-border/70 bg-[#fcfbf8] p-6">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
                     Worum es im ersten Gespräch geht
                   </p>
                   <ul className="mt-5 space-y-4">
                     {reasons.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-[15px] leading-8 text-muted-foreground">
+                      <li key={item} className="flex items-start gap-3 text-base leading-8 text-muted-foreground">
                         <CheckCircle2 className="mt-1 h-4.5 w-4.5 shrink-0 text-primary" />
                         <span>{item}</span>
                       </li>
@@ -103,13 +103,13 @@ export default function ContactPage() {
                 <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-4xl">
                   Platzhalter für das spätere Anfrageformular
                 </h2>
-                <p className="mt-5 max-w-2xl text-[15px] leading-8 text-muted-foreground">
+                <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
                   Diese Fläche ist bewusst so vorbereitet, dass das Zoho-Formular später sauber eingebettet werden
                   kann, ohne die visuelle Ruhe der Seite zu verlieren.
                 </p>
 
                 <div className="mt-8 rounded-[28px] border border-dashed border-border/80 bg-[#faf8f3] p-7 sm:p-8">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground/72">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
                     [ZOHO_FORM_EMBED]
                   </p>
                   <p className="mt-4 text-sm leading-7 text-muted-foreground">

@@ -83,6 +83,10 @@
   --font-sans: "Inter", "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "SFMono-Regular", "SF Mono", "JetBrains Mono", Consolas, "Liberation Mono", monospace;
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.25rem;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.5rem;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -171,7 +175,7 @@
 
 @layer components {
   .page-copy {
-    @apply text-[15px] leading-8 text-muted-foreground;
+    @apply text-base leading-8 text-muted-foreground;
   }
 
   .page-hero-section {
@@ -216,7 +220,7 @@
   }
 
   .nav-link {
-    @apply relative rounded-full px-2.5 py-1.5 text-xs font-medium text-foreground/72 transition-all duration-200 hover:text-foreground xl:text-sm;
+    @apply relative whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] font-medium text-foreground/72 transition-all duration-200 hover:text-foreground xl:text-[14px];
   }
 
   .nav-link::after {

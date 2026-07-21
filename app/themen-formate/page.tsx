@@ -126,7 +126,7 @@ export default function ThemenFormatePage() {
                   Die häufigsten Themenfelder
                 </h2>
               </div>
-              <p className="max-w-2xl text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-2xl text-base leading-8 text-muted-foreground">
                 Die Themen sind nicht als abstrakter Katalog gedacht, sondern als typische Entwicklungsfelder aus
                 technischem Alltag, Kundenkontakt, Führung und Projektgeschäft. Entscheidend ist immer, wo die Wirkung
                 im Alltag fehlen oder verloren gehen kann.
@@ -139,11 +139,11 @@ export default function ThemenFormatePage() {
                   key={topic.title}
                   className={`${index === 0 ? "lg:col-span-2" : ""} soft-card min-h-[220px] p-6 sm:p-7`}
                 >
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">{topic.label}</p>
-                  <h3 className="mt-5 max-w-[18ch] font-display text-[1.85rem] font-medium leading-[1.08] tracking-[-0.03em] text-foreground sm:text-[2.15rem]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">{topic.label}</p>
+                  <h3 className="mt-5 max-w-[18ch] font-display text-[1.85rem] font-medium leading-[1.08] tracking-[-0.03em] text-foreground [overflow-wrap:anywhere] sm:text-[2.15rem]">
                     {topic.title}
                   </h3>
-                  <p className="mt-4 max-w-[34ch] text-[15px] leading-7 text-muted-foreground">{topic.body}</p>
+                  <p className="mt-4 max-w-[34ch] text-base leading-7 text-muted-foreground">{topic.body}</p>
                 </div>
               ))}
             </div>
@@ -159,7 +159,7 @@ export default function ThemenFormatePage() {
                   Welche Form sinnvoll sein kann
                 </h2>
               </div>
-              <p className="max-w-2xl text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-2xl text-base leading-8 text-muted-foreground">
                 Nicht das Thema allein entscheidet über das passende Format. Wichtiger sind Gruppenkonstellation,
                 Transferbedarf, Zeitrahmen und die Frage, ob eher Einzelwirkung, Teamabstimmung oder ein größerer
                 Entwicklungsbogen gebraucht wird.
@@ -168,7 +168,7 @@ export default function ThemenFormatePage() {
 
             <div className="mt-12 grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
               <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_18px_55px_rgba(16,33,43,0.05)]">
-                <div className="relative aspect-[16/11] min-h-[280px]">
+                <div className="relative aspect-[16/11] min-h-[220px] sm:min-h-[280px]">
                   <Image
                     src="/images/grossmann/reserve-seminar-speaker-wide.png"
                     alt="Seminarszene mit aktivem Vortrag im technischen Umfeld"
@@ -178,7 +178,7 @@ export default function ThemenFormatePage() {
                   />
                 </div>
                 <div className="border-t border-border/70 bg-[#fcfbf8] px-6 py-5">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">Praxisbild aus dem Seminaralltag</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Praxisbild aus dem Seminaralltag</p>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
                     Formate wirken dann gut, wenn sie nicht abstrakt geplant werden, sondern an reale Gesprächs-,
                     Führungs- und Kundensituationen anschließen.
@@ -189,17 +189,17 @@ export default function ThemenFormatePage() {
               <div className="grid gap-5">
                 {formats.map((item) => (
                   <div key={item.title} className="white-card p-6 sm:p-7">
-                    <h3 className="font-display text-[1.9rem] font-medium leading-[1.08] tracking-[-0.03em] text-foreground">
+                    <h3 className="font-display text-[1.9rem] font-medium leading-[1.08] tracking-[-0.03em] text-foreground [overflow-wrap:anywhere]">
                       {item.title}
                     </h3>
-                    <p className="mt-4 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
+                    <p className="mt-4 text-base leading-8 text-muted-foreground">{item.body}</p>
                     <div className="mt-6 grid gap-4 sm:grid-cols-2">
                       <div className="rounded-[20px] border border-border/70 bg-[#faf8f3] p-4">
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/72">Sinnvoll, wenn</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Sinnvoll, wenn</p>
                         <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.fit}</p>
                       </div>
                       <div className="rounded-[20px] border border-border/70 bg-[#faf8f3] p-4">
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/72">Typischer Rahmen</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Typischer Rahmen</p>
                         <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.scope}</p>
                       </div>
                     </div>
@@ -211,11 +211,11 @@ export default function ThemenFormatePage() {
             <div className="mt-10 rounded-[28px] border border-border/70 bg-white/75 px-6 py-6 shadow-[0_12px_35px_rgba(16,33,43,0.04)] sm:px-8">
               <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">Zwischenschritt</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Zwischenschritt</p>
                   <h3 className="mt-3 max-w-2xl font-display text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-[2rem]">
                     Oft reichen 15 Minuten, um das passende Format sauber einzugrenzen.
                   </h3>
-                  <p className="mt-3 max-w-2xl text-[15px] leading-8 text-muted-foreground">
+                  <p className="mt-3 max-w-2xl text-base leading-8 text-muted-foreground">
                     Wenn schnell geklärt werden soll, ob eher Seminar, Teamformat oder ein kompakter 1:1-Rahmen passt,
                     reicht meist ein kurzes Erstgespräch mit Blick auf Alltag, Zielgruppe und gewünschte Wirkung.
                   </p>
@@ -241,7 +241,7 @@ export default function ThemenFormatePage() {
                 <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
                   Woran sich ein Seminar, ein Entwicklungsformat oder Coaching unterscheiden
                 </h2>
-                <p className="mt-5 max-w-xl text-[15px] leading-8 text-muted-foreground">
+                <p className="mt-5 max-w-xl text-base leading-8 text-muted-foreground">
                   Nicht jede Situation verlangt dieselbe Tiefe. Diese Gegenüberstellung hilft dabei, schneller zu
                   erkennen, welches Format zur Ausgangslage passt.
                 </p>
@@ -249,7 +249,7 @@ export default function ThemenFormatePage() {
 
               <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_18px_55px_rgba(16,33,43,0.05)]">
                 <div className="grid border-b border-border/70 bg-[#fcfbf8] md:grid-cols-[0.8fr_1fr_1fr_1fr]">
-                  <div className="px-5 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/72">
+                  <div className="px-5 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
                     Orientierung
                   </div>
                   <div className="px-5 py-4 text-sm font-semibold text-foreground">Seminar</div>
@@ -262,7 +262,7 @@ export default function ThemenFormatePage() {
                     key={row.label}
                     className={`grid gap-px bg-border/70 md:grid-cols-[0.8fr_1fr_1fr_1fr] ${index === comparisonRows.length - 1 ? "" : "border-b border-border/70"}`}
                   >
-                    <div className="bg-white px-5 py-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">
+                    <div className="bg-white px-5 py-5 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
                       {row.label}
                     </div>
                     <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">{row.seminar}</div>
@@ -284,7 +284,7 @@ export default function ThemenFormatePage() {
                   Woran sich die Formatwahl orientiert
                 </h2>
               </div>
-              <p className="max-w-2xl text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-2xl text-base leading-8 text-muted-foreground">
                 Gute Formatentscheidungen entstehen nicht aus Standardpaketen, sondern aus Alltag, Zielgruppe und
                 gewünschter Wirkung. Diese drei Fragen helfen fast immer beim Sortieren.
               </p>
@@ -293,9 +293,9 @@ export default function ThemenFormatePage() {
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {decisionPoints.map((item, index) => (
                 <div key={item.title} className="soft-card p-7 sm:p-8">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">0{index + 1} · Orientierung</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">0{index + 1} · Orientierung</p>
                   <h3 className="mt-5 font-display text-2xl font-medium leading-snug text-foreground">{item.title}</h3>
-                  <p className="mt-4 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
+                  <p className="mt-4 text-base leading-8 text-muted-foreground">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -303,14 +303,14 @@ export default function ThemenFormatePage() {
             <div className="mt-10 overflow-hidden rounded-[30px] border border-border/70 bg-[#fcfbf8] shadow-[0_18px_55px_rgba(16,33,43,0.05)]">
               <div className="grid gap-6 p-7 sm:p-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">{proofQuote.eyebrow}</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">{proofQuote.eyebrow}</p>
                   <blockquote className="mt-5 font-display text-[1.55rem] font-light italic leading-[1.6] text-foreground/82 sm:text-[1.8rem]">
                     "{proofQuote.quote}"
                   </blockquote>
                 </div>
                 <div className="flex h-full flex-col justify-between">
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground/76">{proofQuote.author}</p>
+                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">{proofQuote.author}</p>
                     <p className="mt-2 text-sm leading-7 text-muted-foreground">{proofQuote.role}</p>
                     <p className="mt-5 text-sm leading-7 text-muted-foreground">{proofQuote.context}</p>
                   </div>

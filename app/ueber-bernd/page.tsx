@@ -92,12 +92,12 @@ export default function UeberBerndPage() {
                 <h1 className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-6xl">
                   Seit 1994 Arbeit mit Service- und Führungsteams in technischen Umfeldern
                 </h1>
-                <p className="mt-6 max-w-2xl text-[15px] leading-8 text-muted-foreground">
+                <p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground">
                   Bernd Grossmann arbeitet dort, wo technische Exzellenz auf Kundenkontakt, Verantwortung,
                   Zusammenarbeit und wirtschaftlichen Druck trifft. Im Mittelpunkt steht nicht abstrakte Theorie,
                   sondern Wirkung im realen technischen Alltag.
                 </p>
-                <p className="mt-5 max-w-2xl text-[15px] leading-8 text-muted-foreground">
+                <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
                   Gute Technik braucht gute Gespräche. Dieser Gedanke verbindet fachliche Realität mit menschlicher
                   Wirkung, Gesprächsqualität und professioneller Präsenz.
                 </p>
@@ -105,7 +105,7 @@ export default function UeberBerndPage() {
                 <div className="mt-8 grid gap-4 sm:grid-cols-3">
                   {trustSignals.map((item) => (
                     <div key={item.label} className="rounded-[22px] border border-border/70 bg-[#fcfbf8] p-5 shadow-[0_10px_30px_rgba(16,33,43,0.03)]">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.label}</p>
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.label}</p>
                       <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.value}</p>
                     </div>
                   ))}
@@ -123,7 +123,7 @@ export default function UeberBerndPage() {
                 <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
                   Haltung, Methodik und Hintergrund
                 </h2>
-                <p className="mt-5 max-w-xl text-[15px] leading-8 text-muted-foreground">
+                <p className="mt-5 max-w-xl text-base leading-8 text-muted-foreground">
                   Die fachlichen Grundlagen sind nicht Selbstzweck. Relevant ist, was davon im Gespräch, in Führung
                   und im Kundenkontakt praktisch wirksam wird.
                 </p>
@@ -131,10 +131,10 @@ export default function UeberBerndPage() {
               <div className="grid gap-4">
                 {qualifications.map((item) => (
                   <div key={item.title} className="soft-card p-6 sm:p-7">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.title}</p>
-                    <p className="mt-4 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.title}</p>
+                    <p className="mt-4 text-base leading-8 text-muted-foreground">{item.body}</p>
                     <div className="mt-5 rounded-[18px] border border-border/70 bg-white/75 p-4">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Was das in die Arbeit bringt</p>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Was das in die Arbeit bringt</p>
                       <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.effect}</p>
                     </div>
                   </div>
@@ -152,7 +152,7 @@ export default function UeberBerndPage() {
                 <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
                   Erfahrung, Haltung und Umsetzungsstärke greifen zusammen
                 </h2>
-                <p className="mt-5 max-w-xl text-[15px] leading-8 text-muted-foreground">
+                <p className="mt-5 max-w-xl text-base leading-8 text-muted-foreground">
                   Die persönliche Biografie ist nur relevant, wenn sie im Projektalltag spürbar wird. Genau dort setzt
                   die Arbeit an: im technischen Umfeld, in schwierigen Gesprächen und in Situationen mit echter
                   Verantwortung.
@@ -162,8 +162,8 @@ export default function UeberBerndPage() {
               <div className="grid gap-6 lg:grid-cols-3">
                 {perspectiveCards.map((item) => (
                   <div key={item.title} className="white-card p-7">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">{item.title}</p>
-                    <p className="mt-5 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">{item.title}</p>
+                    <p className="mt-5 text-base leading-8 text-muted-foreground">{item.body}</p>
                   </div>
                 ))}
               </div>
@@ -172,7 +172,7 @@ export default function UeberBerndPage() {
             <div className="mt-10 rounded-[28px] border border-border/70 bg-white/80 px-6 py-6 shadow-[0_12px_35px_rgba(16,33,43,0.04)] sm:px-8">
               <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">Weiterführend</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Weiterführend</p>
                   <h3 className="mt-3 max-w-2xl font-display text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-[2rem]">
                     Wer die Person hinter der Arbeit versteht, möchte meist als Nächstes Wirkung oder Beispiele sehen.
                   </h3>

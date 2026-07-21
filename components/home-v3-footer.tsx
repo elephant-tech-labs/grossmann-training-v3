@@ -17,17 +17,17 @@ export default function HomeV3Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.9fr] lg:px-8">
         <div className="max-w-md">
           <Image src="/images/logo_white.svg" alt="Grossmann Training" width={190} height={40} className="h-9 w-auto" />
-          <p className="mt-5 text-sm leading-7 text-white/68">
+          <p className="mt-5 text-sm leading-7 text-white/80">
             Wirksamkeit im Kundenkontakt für technische Teams. Ruhig, praxisnah und mit Blick auf das, was im Alltag
             wirklich trägt.
           </p>
         </div>
 
         <div className="lg:pl-4">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/52">Navigation</h2>
+          <h2 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/72">Navigation</h2>
           <nav className="mt-5 flex flex-col gap-2.5" aria-label="Footer Navigation">
             {footerLinks.map((item) => (
-              <Link key={item.href} href={item.href} className="text-sm text-white/74 transition-colors hover:translate-x-0.5 hover:text-white">
+              <Link key={item.href} href={item.href} className="text-sm text-white/82 transition-colors hover:translate-x-0.5 hover:text-white">
                 {item.label}
               </Link>
             ))}
@@ -35,8 +35,8 @@ export default function HomeV3Footer() {
         </div>
 
         <div className="lg:pl-4">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/52">Kontakt</h2>
-          <div className="mt-5 space-y-2.5 text-sm text-white/74">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.24em] text-white/72">Kontakt</h2>
+          <div className="mt-5 space-y-2.5 text-sm text-white/82">
             <p>Brackenheim, Deutschland</p>
             <a href="tel:+49713515764" className="block transition-colors hover:text-white">
               +49 7135 15764
@@ -49,7 +49,7 @@ export default function HomeV3Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 text-xs text-white/52 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 text-xs text-white/70 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
           <p>&copy; {new Date().getFullYear()} Grossmann Training</p>
           <div className="flex gap-5">
             <Link href="/imprint" className="transition-colors hover:text-white">

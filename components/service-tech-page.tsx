@@ -102,7 +102,7 @@ export default function ServiceTechPage() {
                 <span className="block italic text-primary">klar und souverän</span>
                 wirken soll.
               </h1>
-              <p className="mt-7 max-w-2xl text-[15px] leading-8 text-muted-foreground">
+              <p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground">
                 Servicetechniker prägen oft den Moment, an den sich Kunden erinnern. Dieses Training stärkt
                 Erklärungsfähigkeit, Auftreten, Deeskalation und kommunikative Sicherheit genau dort, wo technische
                 Kompetenz im direkten Kontakt erlebbar werden muss.
@@ -111,7 +111,7 @@ export default function ServiceTechPage() {
 
             <div className="lg:col-span-5 lg:pt-10">
               <div className="soft-card p-6 sm:p-7">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
                   Typische Hebel im Service
                 </p>
                 <div className="mt-5 space-y-4">
@@ -132,7 +132,7 @@ export default function ServiceTechPage() {
                   </Link>
                 </div>
 
-                <div className="mt-7 border-t border-border/70 pt-4 text-[11px] uppercase tracking-[0.18em] text-muted-foreground/78">
+                <div className="mt-7 border-t border-border/70 pt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
                   Inhouse · Praxisnah · Ruhig · Direkt anschlussfähig
                 </div>
               </div>
@@ -163,7 +163,7 @@ export default function ServiceTechPage() {
                 {situations.map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
-                    <p className="text-[15px] leading-8 text-muted-foreground">{item}</p>
+                    <p className="text-base leading-8 text-muted-foreground">{item}</p>
                   </div>
                 ))}
               </div>
@@ -190,7 +190,7 @@ export default function ServiceTechPage() {
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="max-w-md text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-md text-base leading-8 text-muted-foreground">
                 Kunden erleben Kompetenz nicht nur über fachlich richtige Lösungen. Sie erleben sie auch über
                 Verständlichkeit, Haltung, Gesprächsführung und den Umgang mit schwierigen Situationen.
               </p>
@@ -206,7 +206,7 @@ export default function ServiceTechPage() {
                     <Icon className="h-5 w-5" />
                   </span>
                   <h3 className="mt-7 font-display text-2xl font-medium leading-snug text-foreground">{item.title}</h3>
-                  <p className="mt-4 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
+                  <p className="mt-4 text-base leading-8 text-muted-foreground">{item.body}</p>
                 </div>
               )
             })}
@@ -225,7 +225,7 @@ export default function ServiceTechPage() {
               >
                 Was sich für Teilnehmende und Unternehmen verändern soll.
               </h2>
-              <p className="mt-6 max-w-md text-[15px] leading-8 text-muted-foreground">
+              <p className="mt-6 max-w-md text-base leading-8 text-muted-foreground">
                 Entscheidend ist nicht nur, dass Inhalte verstanden wurden. Entscheidend ist, dass Kundenkontakt
                 ruhiger, klarer und professioneller erlebt wird.
               </p>
@@ -233,12 +233,12 @@ export default function ServiceTechPage() {
 
             <div className="grid gap-6 md:grid-cols-2">
               <div className="white-card p-7">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
                   Für Teilnehmende
                 </p>
                 <ul className="mt-6 space-y-4">
                   {participantBenefits.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-[15px] leading-8 text-muted-foreground">
+                    <li key={item} className="flex items-start gap-3 text-base leading-8 text-muted-foreground">
                       <CheckCircle2 className="mt-1 h-4.5 w-4.5 shrink-0 text-primary" />
                       <span>{item}</span>
                     </li>
@@ -247,12 +247,12 @@ export default function ServiceTechPage() {
               </div>
 
               <div className="white-card p-7">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
                   Für Unternehmen
                 </p>
                 <ul className="mt-6 space-y-4">
                   {businessBenefits.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-[15px] leading-8 text-muted-foreground">
+                    <li key={item} className="flex items-start gap-3 text-base leading-8 text-muted-foreground">
                       <CheckCircle2 className="mt-1 h-4.5 w-4.5 shrink-0 text-primary" />
                       <span>{item}</span>
                     </li>
@@ -277,7 +277,7 @@ export default function ServiceTechPage() {
               </h2>
             </div>
             <div className="lg:col-span-5">
-              <p className="max-w-md text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-md text-base leading-8 text-muted-foreground">
                 Inhouse-Trainings, kompakte Impulse oder Transfer-Bausteine lassen sich an Zielgruppe, Kontext und
                 gewünschte Tiefe anpassen.
               </p>
@@ -287,8 +287,8 @@ export default function ServiceTechPage() {
           <div className="mt-12 grid gap-5 lg:grid-cols-3 lg:gap-6">
             {formats.map((item) => (
               <div key={item.label} className="soft-card p-6 sm:p-8">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">{item.label}</p>
-                <p className="mt-6 text-[15px] leading-8 text-muted-foreground">{item.body}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">{item.label}</p>
+                <p className="mt-6 text-base leading-8 text-muted-foreground">{item.body}</p>
               </div>
             ))}
           </div>
@@ -322,22 +322,22 @@ export default function ServiceTechPage() {
               </div>
 
               <div className="p-8 sm:p-10 lg:p-12">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground/74">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                   Kundenstimme aus dem Servicekontext
                 </p>
                 <blockquote className="mt-5 font-display text-[clamp(1.2rem,2vw,1.7rem)] font-light italic leading-[1.7] text-foreground/80">
                   „Ich bin sprachlos. Nach diesem Pilotseminar haben wir sofort vier weitere Trainings beauftragt. Das
                   Feedback der Techniker und des Serviceteams war herausragend.“
                 </blockquote>
-                <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground/80">
+                <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
                   Stefan Zöller · Leitung NL Stuttgart Service & FM · R.O.M. Technik GmbH & Co. KG
                 </p>
 
                 <div className="mt-8 rounded-[24px] border border-dashed border-border/90 bg-[#faf8f3] p-6">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground/74">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                     [WEITERE_TESTIMONIALS_ODER_SERVICE_CASE]
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-muted-foreground/88">
+                  <p className="mt-3 text-sm leading-7 text-muted-foreground">
                     Platz für zusätzliche Kundenstimme, Auszug aus Service-Fallbeispiel oder kurze dokumentierte
                     Wirkung aus dem technischen Alltag.
                   </p>
@@ -384,7 +384,7 @@ export default function ServiceTechPage() {
                     +
                   </span>
                 </summary>
-                <p className="mt-4 max-w-4xl text-[15px] leading-8 text-muted-foreground">{item.answer}</p>
+                <p className="mt-4 max-w-4xl text-base leading-8 text-muted-foreground">{item.answer}</p>
               </details>
             ))}
           </div>

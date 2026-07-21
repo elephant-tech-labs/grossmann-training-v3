@@ -158,7 +158,7 @@ export default function ReferenzenStimmenPage() {
             <div className="grid gap-4 sm:grid-cols-3">
               {proofSignals.map((item) => (
                 <div key={item.label} className="rounded-[24px] border border-border/70 bg-[#fcfbf8] p-6 shadow-[0_10px_30px_rgba(16,33,43,0.03)]">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.label}</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.label}</p>
                   <h2 className="mt-4 font-display text-[1.95rem] font-medium leading-[1.08] tracking-[-0.03em] text-foreground">
                     {item.value}
                   </h2>
@@ -180,11 +180,11 @@ export default function ReferenzenStimmenPage() {
                 >
                   Eine persönliche Stimme direkt aus der Praxis
                 </h2>
-                <p className="mt-6 max-w-xl text-[15px] leading-8 text-muted-foreground">
+                <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">
                   Ein Teilnehmer schildert mit eigenen Worten, wie er das Training für Techniker im Kundenkontakt
                   erlebt hat. Ungefiltert, persönlich und unmittelbar nach der gemeinsamen Arbeit.
                 </p>
-                <p className="mt-5 text-xs leading-6 text-muted-foreground/72">
+                <p className="mt-5 text-xs leading-6 text-muted-foreground">
                   Mit dem Abspielen wird eine Verbindung zu YouTube hergestellt.
                 </p>
               </div>
@@ -203,7 +203,7 @@ export default function ReferenzenStimmenPage() {
               >
                 <div className={`grid gap-0 lg:grid-cols-[1.12fr_0.88fr] ${index === 1 ? "lg:grid-cols-[0.88fr_1.12fr]" : ""}`}>
                   <div className={`p-8 sm:p-10 lg:p-12 ${index === 1 ? "lg:order-2" : ""}`}>
-                    <p className={`text-[11px] font-semibold uppercase tracking-[0.24em] ${index === 0 ? "text-white/56" : "text-primary/72"}`}>
+                    <p className={`text-xs font-semibold uppercase tracking-[0.24em] ${index === 0 ? "text-white/72" : "text-primary"}`}>
                       {item.eyebrow}
                     </p>
                     <h2 className={`mt-5 max-w-3xl font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.55rem] ${index === 0 ? "text-white" : "text-foreground"}`}>
@@ -214,10 +214,10 @@ export default function ReferenzenStimmenPage() {
                     >
                       „{item.quote}“
                     </blockquote>
-                    <p className={`mt-6 text-xs uppercase tracking-[0.18em] ${index === 0 ? "text-white/62" : "text-muted-foreground/78"}`}>
+                    <p className={`mt-6 text-xs uppercase tracking-[0.18em] ${index === 0 ? "text-white/76" : "text-muted-foreground"}`}>
                       {item.author} · {item.role} · {item.company}
                     </p>
-                    <p className={`mt-5 max-w-2xl text-sm leading-7 ${index === 0 ? "text-white/72" : "text-muted-foreground"}`}>
+                    <p className={`mt-5 max-w-2xl text-sm leading-7 ${index === 0 ? "text-white/82" : "text-muted-foreground"}`}>
                       {item.summary}
                     </p>
                     <Link
@@ -253,7 +253,7 @@ export default function ReferenzenStimmenPage() {
                   Stimmen nach Kontext geordnet statt als lose Sammlung
                 </h2>
               </div>
-              <p className="max-w-2xl text-[15px] leading-8 text-muted-foreground">
+              <p className="max-w-2xl text-base leading-8 text-muted-foreground">
                 Nicht jede Stimme beweist dasselbe. Manche zeigen nachhaltige Zusammenarbeit, andere direkte
                 Alltagstauglichkeit, Wiederbeauftragung oder starke Resonanz im Team.
               </p>
@@ -264,11 +264,11 @@ export default function ReferenzenStimmenPage() {
                 <section key={group.id} className="rounded-[30px] border border-border/70 bg-[#fcfbf8] p-6 sm:p-8 shadow-[0_12px_35px_rgba(16,33,43,0.04)]">
                   <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
                     <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">Kontext</p>
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Kontext</p>
                       <h3 className="mt-4 font-display text-3xl font-medium leading-tight tracking-[-0.03em] text-foreground">
                         {group.title}
                       </h3>
-                      <p className="mt-4 max-w-xl text-[15px] leading-8 text-muted-foreground">{group.body}</p>
+                      <p className="mt-4 max-w-xl text-base leading-8 text-muted-foreground">{group.body}</p>
                     </div>
 
                     <div className="grid gap-5 md:grid-cols-2">
@@ -283,7 +283,7 @@ export default function ReferenzenStimmenPage() {
                                 .join("")}
                             </div>
                             <div>
-                              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.category}</p>
+                              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.category}</p>
                               <p className="mt-1 text-sm font-semibold text-foreground">{item.title}</p>
                             </div>
                           </div>
@@ -293,11 +293,11 @@ export default function ReferenzenStimmenPage() {
                           </blockquote>
 
                           <div className="mt-6 rounded-[18px] border border-border/70 bg-[#faf8f3] p-4">
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Was das belegt</p>
+                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Was das belegt</p>
                             <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.proof}</p>
                           </div>
 
-                          <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground/78">
+                          <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
                             {item.author} · {item.role}
                           </p>
                           <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.company}</p>
@@ -327,7 +327,7 @@ export default function ReferenzenStimmenPage() {
                   <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.65rem]">
                     Von der Stimme zum passenden nächsten Blick
                   </h2>
-                  <p className="mt-4 max-w-xl text-[15px] leading-8 text-muted-foreground">
+                  <p className="mt-4 max-w-xl text-base leading-8 text-muted-foreground">
                     Stimmen schaffen Vertrauen. Für die nächste Entscheidung helfen meist entweder die Praxisbeispiele
                     oder der Blick auf die passende Zielgruppe.
                   </p>
@@ -336,7 +336,7 @@ export default function ReferenzenStimmenPage() {
                 <div className="grid gap-5 md:grid-cols-2">
                   {nextSteps.map((item) => (
                     <div key={item.title} className="rounded-[22px] border border-border/70 bg-white p-5 sm:p-6">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">Nächster Schritt</p>
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Nächster Schritt</p>
                       <h3 className="mt-4 font-display text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground">
                         {item.title}
                       </h3>

@@ -183,7 +183,7 @@ export default function PraxisbeispielePage() {
               <div className="grid gap-4 sm:grid-cols-3">
                 {caseOverview.map((item) => (
                   <div key={item.label} className="rounded-[22px] border border-border/70 bg-[#fcfbf8] p-5">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.label}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.label}</p>
                     <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.value}</p>
                   </div>
                 ))}
@@ -212,43 +212,43 @@ export default function PraxisbeispielePage() {
                     </div>
                     <div className={`p-8 sm:p-10 lg:p-12 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                       <div className="flex flex-wrap items-center gap-3">
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">{item.title}</p>
-                        <span className="inline-flex rounded-full border border-border/70 bg-[#fcfbf8] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground/76">
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">{item.title}</p>
+                        <span className="inline-flex rounded-full border border-border/70 bg-[#fcfbf8] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                           Fall {String(index + 1).padStart(2, "0")}
                         </span>
                       </div>
                       <h2 className="mt-5 max-w-2xl font-display text-3xl font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-4xl">
                         {item.subtitle}
                       </h2>
-                      <p className="mt-5 text-[15px] leading-8 text-muted-foreground">{item.intro}</p>
+                      <p className="mt-5 text-base leading-8 text-muted-foreground">{item.intro}</p>
 
                       <div className="mt-7 flex flex-wrap gap-3">
                         <div className="rounded-full border border-border/70 bg-[#fcfbf8] px-4 py-2 text-sm text-foreground">
-                          <span className="font-semibold text-primary/80">Zielgruppe:</span> {item.audience}
+                          <span className="font-semibold text-primary">Zielgruppe:</span> {item.audience}
                         </div>
                         <div className="rounded-full border border-border/70 bg-[#fcfbf8] px-4 py-2 text-sm text-foreground">
-                          <span className="font-semibold text-primary/80">Format:</span> {item.format}
+                          <span className="font-semibold text-primary">Format:</span> {item.format}
                         </div>
                         <div className="rounded-full border border-border/70 bg-[#fcfbf8] px-4 py-2 text-sm text-foreground">
-                          <span className="font-semibold text-primary/80">Schwerpunkt:</span> {item.focus}
+                          <span className="font-semibold text-primary">Schwerpunkt:</span> {item.focus}
                         </div>
                       </div>
 
                       <div className="mt-8 grid gap-4 md:grid-cols-2">
                         <div className="rounded-[22px] border border-border/70 bg-[#faf8f3] p-5">
-                          <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Ausgangssituation</p>
+                          <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Ausgangssituation</p>
                           <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.situation}</p>
                         </div>
                         <div className="rounded-[22px] border border-border/70 bg-[#faf8f3] p-5">
-                          <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Herausforderung</p>
+                          <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Herausforderung</p>
                           <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.challenge}</p>
                         </div>
                         <div className="rounded-[22px] border border-border/70 bg-[#faf8f3] p-5">
-                          <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground/72">Vorgehen</p>
+                          <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Vorgehen</p>
                           <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.approach}</p>
                         </div>
                         <div className="rounded-[22px] border border-border/70 bg-[#f4efe2] p-5">
-                          <p className="text-[11px] uppercase tracking-[0.18em] text-primary/72">Wirkung</p>
+                          <p className="text-xs uppercase tracking-[0.18em] text-primary">Wirkung</p>
                           <p className="mt-3 text-sm leading-7 text-foreground/78">{item.impact}</p>
                         </div>
                       </div>
@@ -280,8 +280,8 @@ export default function PraxisbeispielePage() {
                         <blockquote className="font-display text-[1.55rem] font-light italic leading-[1.7] text-white/88 sm:text-[1.85rem]">
                           "{proofQuote.quote}"
                         </blockquote>
-                        <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">{proofQuote.author}</p>
-                        <p className="mt-2 text-sm leading-7 text-white/72">{proofQuote.role}</p>
+                        <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-white/82">{proofQuote.author}</p>
+                        <p className="mt-2 text-sm leading-7 text-white/82">{proofQuote.role}</p>
                       </div>
                     </div>
                   </section>

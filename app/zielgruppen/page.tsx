@@ -182,7 +182,7 @@ export default function ZielgruppenPage() {
                 <h2 className="mt-5 max-w-xl font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.85rem]">
                   Welche Rolle Ihrer Situation am ehesten entspricht
                 </h2>
-                <p className="mt-4 max-w-lg text-[15px] leading-8 text-muted-foreground">
+                <p className="mt-4 max-w-lg text-base leading-8 text-muted-foreground">
                   Die Themen wirken nach außen ähnlich, der richtige Ansatz hängt aber stark davon ab, in welcher Rolle
                   Menschen stehen und an welcher Stelle Wirkung verloren geht.
                 </p>
@@ -202,8 +202,8 @@ export default function ZielgruppenPage() {
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {overviewCards.map((item) => (
                   <div key={item.label} className="rounded-[24px] border border-border/70 bg-[#fcfbf8] p-6 shadow-[0_10px_30px_rgba(16,33,43,0.03)]">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">{item.label}</p>
-                    <p className="mt-4 text-[15px] leading-7 text-muted-foreground [overflow-wrap:anywhere]">{item.value}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.label}</p>
+                    <p className="mt-4 text-base leading-7 text-muted-foreground [overflow-wrap:anywhere]">{item.value}</p>
                   </div>
                 ))}
               </div>
@@ -224,7 +224,7 @@ export default function ZielgruppenPage() {
                     <div className="grid gap-8 lg:grid-cols-[0.94fr_1.06fr]">
                       <div>
                         <div className="flex flex-wrap items-center gap-3">
-                          <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/66">
+                          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
                             0{index + 1}
                           </p>
                           <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/8 text-primary">
@@ -234,19 +234,19 @@ export default function ZielgruppenPage() {
                         <h2 className="mt-6 max-w-lg font-display text-3xl font-medium leading-snug text-foreground sm:text-4xl">
                           {group.title}
                         </h2>
-                        <p className="mt-5 max-w-xl text-[15px] leading-8 text-muted-foreground">{group.body}</p>
+                        <p className="mt-5 max-w-xl text-base leading-8 text-muted-foreground">{group.body}</p>
 
                         <div className="mt-7 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                           <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Typische Lage</p>
+                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Typische Lage</p>
                             <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">{group.situation}</p>
                           </div>
                           <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Nähe zum Kunden</p>
+                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nähe zum Kunden</p>
                             <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">{group.proximity}</p>
                           </div>
                           <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5 md:col-span-2 xl:col-span-1">
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/72">Passende Formate</p>
+                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Passende Formate</p>
                             <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">{group.formats}</p>
                           </div>
                         </div>
@@ -273,11 +273,11 @@ export default function ZielgruppenPage() {
                       </div>
 
                       <div className="white-card p-6 sm:p-7">
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary/72">Schwerpunkte</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Schwerpunkte</p>
                         <p className="mt-3 text-sm leading-7 text-muted-foreground">
                           Typische Arbeitsschwerpunkte, die in dieser Rolle im Alltag besonders wirksam werden.
                         </p>
-                        <ul className="mt-5 space-y-0 text-[15px] leading-8 text-muted-foreground">
+                        <ul className="mt-5 space-y-0 text-base leading-8 text-muted-foreground">
                           {group.bullets.map((item) => (
                             <li key={item} className="border-b border-border/60 py-3 first:pt-0 last:border-b-0 last:pb-0">
                               {item}
@@ -296,7 +296,7 @@ export default function ZielgruppenPage() {
                           <h3 className="mt-5 max-w-lg font-display text-3xl font-light leading-tight tracking-[-0.03em] text-foreground sm:text-[2.35rem]">
                             Wenn die Rolle klar ist, folgen meist Format oder Praxisbeispiel.
                           </h3>
-                          <p className="mt-4 max-w-xl text-[15px] leading-8 text-muted-foreground">
+                          <p className="mt-4 max-w-xl text-base leading-8 text-muted-foreground">
                             Manche Besucher wollen zuerst wissen, in welcher Form das sinnvoll ist. Andere möchten
                             zuerst sehen, wie vergleichbare Situationen praktisch bearbeitet wurden.
                           </p>
@@ -305,7 +305,7 @@ export default function ZielgruppenPage() {
                         <div className="grid gap-5 lg:grid-cols-2">
                           {bridgeLinks.map((item) => (
                             <div key={item.title} className="rounded-[22px] border border-border/70 bg-white p-5 sm:p-6">
-                              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/72">Nächster Blick</p>
+                              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Nächster Blick</p>
                               <h3 className="mt-4 font-display text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground">
                                 {item.title}
                               </h3>

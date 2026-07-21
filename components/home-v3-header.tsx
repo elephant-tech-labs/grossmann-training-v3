@@ -58,7 +58,7 @@ export default function HomeV3Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="tel:+49713515764"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            className="inline-flex items-center gap-2 whitespace-nowrap text-[14px] text-muted-foreground transition-colors hover:text-foreground"
           >
             <Phone className="h-4 w-4" />
             <span>+49 7135 15764</span>
@@ -66,7 +66,7 @@ export default function HomeV3Header() {
           <a
             href="/kontakt"
             aria-current={pathname === "/kontakt" ? "page" : undefined}
-            className={`rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(14,108,157,0.18)] transition-all hover:-translate-y-0.5 hover:bg-primary-dark ${
+            className={`whitespace-nowrap rounded-full px-5 py-2.5 text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(14,108,157,0.18)] transition-all hover:-translate-y-0.5 hover:bg-primary-dark ${
               pathname === "/kontakt" ? "bg-primary-dark ring-1 ring-primary/25" : "bg-primary"
             }`}
           >
