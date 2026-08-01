@@ -185,42 +185,45 @@ export default function HomepageV3() {
       </section>
 
       <section className="border-b border-border/70 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.45fr_0.8fr] lg:items-center">
-            <div>
-              <SectionEyebrow>Beweis aus der Praxis</SectionEyebrow>
-              <p className="mt-3 max-w-md text-sm leading-7 text-muted-foreground">
-                Ausgewählte Kunden, langjährige Praxiserfahrung und reale Entwicklungsarbeit in Service,
-                Projektumfeld, Gebäudetechnik und technischer Führung.
-              </p>
-            </div>
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
+          <div className="max-w-2xl">
+            <SectionEyebrow>Beweis aus der Praxis</SectionEyebrow>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              Ausgewählte Kunden, langjährige Praxiserfahrung und reale Entwicklungsarbeit in Service,
+              Projektumfeld, Gebäudetechnik und technischer Führung.
+            </p>
+          </div>
 
-            <div className="grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-3 lg:grid-cols-6">
-              {clientLogos.map((client) => (
-                <div
-                  key={client}
-                  className="flex min-h-12 items-center justify-start rounded-2xl border border-border/70 bg-[#fcfbf8] px-4 py-3 text-sm font-semibold tracking-[0.12em] text-foreground/72 sm:justify-center"
-                >
-                  {client}
-                </div>
-              ))}
-            </div>
+          <div className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            {clientLogos.map((client) => (
+              <div
+                key={client}
+                className="flex min-h-14 items-center justify-start rounded-2xl border border-border/70 bg-[#fcfbf8] px-4 py-3 text-sm font-semibold tracking-[0.12em] text-foreground/72 sm:justify-center"
+              >
+                {client}
+              </div>
+            ))}
+          </div>
 
-            <div className="soft-card px-5 py-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-                {homepageProof.eyebrow}
-              </p>
-              <blockquote className="mt-3 text-sm leading-7 text-foreground/82">
-                „{homepageProof.quote}“
-              </blockquote>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                {homepageProof.author} · {homepageProof.role}
-              </p>
-              <div className="mt-4 rounded-[18px] border border-border/70 bg-white/75 px-4 py-3">
+          <div className="soft-card mt-8 overflow-hidden p-0">
+            <div className="grid lg:grid-cols-[minmax(0,1.55fr)_minmax(280px,0.45fr)]">
+              <div className="px-5 py-6 sm:px-7 sm:py-7 lg:px-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+                  {homepageProof.eyebrow}
+                </p>
+                <blockquote className="mt-3 max-w-4xl text-sm leading-7 text-foreground/82 sm:text-base sm:leading-8">
+                  „{homepageProof.quote}“
+                </blockquote>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                  {homepageProof.author} · {homepageProof.role}
+                </p>
+              </div>
+
+              <div className="border-t border-border/70 bg-[#faf8f3] px-5 py-6 sm:px-7 lg:border-l lg:border-t-0 lg:px-7 lg:py-7">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                   {homepageProof.proofLabel}
                 </p>
-                <p className="mt-2 text-sm leading-6 text-foreground/82">{homepageProof.proofValue}</p>
+                <p className="mt-3 text-sm leading-7 text-foreground/82">{homepageProof.proofValue}</p>
               </div>
             </div>
           </div>

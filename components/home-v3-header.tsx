@@ -167,8 +167,7 @@ export default function HomeV3Header() {
               pathname === "/kontakt" ? "bg-primary-dark ring-1 ring-primary/25" : "bg-primary"
             }`}
           >
-            <span className="hidden sm:inline">Erstgespräch</span>
-            <span className="sm:hidden">Kontakt</span>
+            Erstgespräch
           </Link>
         </div>
       </div>
