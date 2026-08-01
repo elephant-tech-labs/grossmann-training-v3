@@ -326,20 +326,19 @@ export default function ServiceTechPage() {
                   Kundenstimme aus dem Servicekontext
                 </p>
                 <blockquote className="mt-5 font-display text-[clamp(1.2rem,2vw,1.7rem)] font-light italic leading-[1.7] text-foreground/80">
-                  „Ich bin sprachlos. Nach diesem Pilotseminar haben wir sofort vier weitere Trainings beauftragt. Das
-                  Feedback der Techniker und des Serviceteams war herausragend.“
+                  „Ich bin ... sprachlos!“
                 </blockquote>
                 <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
                   Stefan Zöller · Leitung NL Stuttgart Service & FM · R.O.M. Technik GmbH & Co. KG
                 </p>
 
-                <div className="mt-8 rounded-[24px] border border-dashed border-border/90 bg-[#faf8f3] p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                    [WEITERE_TESTIMONIALS_ODER_SERVICE_CASE]
+                <div className="mt-8 rounded-[24px] border border-border/70 bg-[#faf8f3] p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                    Was daraus entstand
                   </p>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    Platz für zusätzliche Kundenstimme, Auszug aus Service-Fallbeispiel oder kurze dokumentierte
-                    Wirkung aus dem technischen Alltag.
+                    Aus dem Pilotseminar entwickelten sich vier weitere Seminare, mehrere Vertriebstage sowie
+                    Führungs- und Verhandlungstrainings.
                   </p>
                 </div>
 
@@ -367,7 +366,7 @@ export default function ServiceTechPage() {
                 id="faq-tech-heading"
                 className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl"
               >
-                Was oft vor einem ersten Gespräch geklärt werden möchte.
+                Was vor einem ersten Gespräch häufig geklärt werden soll.
               </h2>
             </div>
           </div>

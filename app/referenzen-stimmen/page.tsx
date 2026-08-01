@@ -52,7 +52,8 @@ const featuredTestimonials = [
     role: "Teamleiter Wartung & Service",
     company: "Rud. Otto Meyer Technik GmbH & Co. KG, Neu-Isenburg",
     initials: "DD",
-    context: "Kundenstimme eines Auftraggebers und Teamleiters, nicht die Aussage eines Seminarteilnehmers.",
+    context:
+      "Aus Auftraggebersicht beschreibt Dirk Wolfgang Dietrich die Wirkung im Team und die geplante Fortsetzung.",
     href: "/praxisbeispiele#service",
     hrefLabel: "Passendes Praxisbeispiel ansehen",
   },
@@ -66,7 +67,7 @@ const featuredTestimonials = [
     company: "R.O.M. Rud. Otto Meyer Technik GmbH & Co. KG, Stuttgart",
     initials: "SZ",
     context:
-      "Das war der erste Satz des Serviceleiters am Ende des Pilotseminars. Danach folgten vier weitere Seminare, mehrere Vertriebstage sowie Führungs- und Verhandlungstrainings. Dieser Ablauf ist redaktioneller Kontext und kein längeres wörtliches Zitat.",
+      "Aus dem Pilotseminar entwickelten sich vier weitere Seminare, mehrere Vertriebstage sowie Führungs- und Verhandlungstrainings.",
     href: "/praxisbeispiele#service",
     hrefLabel: "Service-Praxisbeispiel ansehen",
   },
@@ -214,8 +215,8 @@ export default function ReferenzenStimmenPage() {
                 Ein Service Manager berichtet aus Auftraggebersicht
               </h2>
               <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">
-                Als Kunde und Auftraggeber schildert er seine Erfahrung mit dem Training für Techniker im
-                Kundenkontakt. Er ist Service Manager und kein Teilnehmer des Seminars.
+                Als Service Manager und Auftraggeber schildert er, wie er die Zusammenarbeit und das Training für
+                Techniker im Kundenkontakt erlebt hat.
               </p>
               <p className="mt-5 text-sm leading-7 text-muted-foreground">Mit dem Abspielen wird eine Verbindung zu YouTube hergestellt.</p>
             </div>
@@ -227,27 +228,30 @@ export default function ReferenzenStimmenPage() {
           <div className="mx-auto max-w-7xl space-y-7 px-4 sm:px-6 lg:px-8">
             {featuredTestimonials.map((item, index) => (
               <article key={item.number} className={`overflow-hidden rounded-[32px] border border-border/70 ${index === 0 ? "bg-[#102f42] text-white" : "bg-[#fcfbf8]"}`}>
-                <div className="grid lg:grid-cols-[1fr_18rem]">
-                  <div className="p-8 sm:p-10 lg:p-12">
-                    <p className={`text-xs font-semibold uppercase tracking-[0.24em] ${index === 0 ? "text-white/75" : "text-primary"}`}>{item.number} · {item.eyebrow}</p>
-                    <h2 className={`mt-5 max-w-3xl font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.55rem] ${index === 0 ? "text-white" : "text-foreground"}`}>{item.title}</h2>
-                    <blockquote className={`mt-6 max-w-4xl font-display text-[1.45rem] font-light italic leading-[1.65] sm:text-[1.8rem] ${index === 0 ? "text-white/92" : "text-foreground/86"}`}>
-                      „{item.quote}“
-                    </blockquote>
-                    <p className={`mt-6 text-base leading-8 ${index === 0 ? "text-white/82" : "text-muted-foreground"}`}>{item.context}</p>
-                    <p className={`mt-6 text-xs font-semibold uppercase tracking-[0.18em] ${index === 0 ? "text-white/78" : "text-muted-foreground"}`}>
-                      {item.author} · {item.role}
-                    </p>
-                    <p className={`mt-2 text-sm leading-7 ${index === 0 ? "text-white/78" : "text-muted-foreground"}`}>{item.company}</p>
-                    <Link href={item.href} className={`mt-6 inline-flex items-center gap-2 text-sm font-semibold ${index === 0 ? "text-white" : "text-primary"}`}>
-                      {item.hrefLabel} <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
-                  <div className={`flex min-h-[240px] items-center justify-center border-t p-8 lg:min-h-full lg:border-l lg:border-t-0 ${index === 0 ? "border-white/10 bg-white/5" : "border-border/70 bg-white"}`}>
-                    <div className={`flex h-32 w-32 items-center justify-center rounded-full border font-display text-4xl ${index === 0 ? "border-white/20 bg-white/8 text-white" : "border-primary/15 bg-primary/8 text-primary"}`} aria-label={`Initialen von ${item.author}`}>
+                <div className="p-8 sm:p-10 lg:p-12">
+                  <div className="flex items-center gap-4">
+                    <div
+                      className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full border font-display text-xl ${index === 0 ? "border-white/20 bg-white/8 text-white" : "border-primary/15 bg-primary/8 text-primary"}`}
+                      aria-label={`Initialen von ${item.author}`}
+                    >
                       {item.initials}
                     </div>
+                    <p className={`text-xs font-semibold uppercase tracking-[0.24em] ${index === 0 ? "text-white/75" : "text-primary"}`}>
+                      {item.number} · {item.eyebrow}
+                    </p>
                   </div>
+                  <h2 className={`mt-5 max-w-3xl font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.55rem] ${index === 0 ? "text-white" : "text-foreground"}`}>{item.title}</h2>
+                  <blockquote className={`mt-6 max-w-4xl font-display text-[1.45rem] font-light italic leading-[1.65] sm:text-[1.8rem] ${index === 0 ? "text-white/92" : "text-foreground/86"}`}>
+                    „{item.quote}“
+                  </blockquote>
+                  <p className={`mt-6 max-w-4xl text-base leading-8 ${index === 0 ? "text-white/82" : "text-muted-foreground"}`}>{item.context}</p>
+                  <p className={`mt-6 text-xs font-semibold uppercase tracking-[0.18em] ${index === 0 ? "text-white/78" : "text-muted-foreground"}`}>
+                    {item.author} · {item.role}
+                  </p>
+                  <p className={`mt-2 text-sm leading-7 ${index === 0 ? "text-white/78" : "text-muted-foreground"}`}>{item.company}</p>
+                  <Link href={item.href} className={`mt-6 inline-flex items-center gap-2 text-sm font-semibold ${index === 0 ? "text-white" : "text-primary"}`}>
+                    {item.hrefLabel} <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
               </article>
             ))}
@@ -258,13 +262,30 @@ export default function ReferenzenStimmenPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionEyebrow>Weitere Stimmen</SectionEyebrow>
             <div className="mt-5 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
-              <h2 className="font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">Nach Kontext geordnet, vollständig aus dem Arbeitsdokument</h2>
-              <p className="max-w-2xl text-base leading-8 text-muted-foreground">Die Reihenfolge und Zuordnung folgen dem Top-10-Dokument. Wo kein freigegebenes Porträt vorliegt, wird bewusst mit Initialen statt mit einer fremden Person gearbeitet.</p>
+              <h2 className="font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
+                Stimmen aus unterschiedlichen Arbeitskontexten
+              </h2>
+              <p className="max-w-2xl text-base leading-8 text-muted-foreground">
+                Die Rückmeldungen zeigen, wie die Arbeit in Service, Führung, Konfliktklärung und persönlicher
+                Entwicklung im Alltag erlebt wird.
+              </p>
             </div>
+
+            <nav aria-label="Stimmen nach Kontext" className="mt-8 flex flex-wrap gap-3">
+              <Link href="#service" className="rounded-full border border-border bg-white px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/35 hover:text-primary">
+                Service & Kundenkontakt
+              </Link>
+              <Link href="#fuehrung-transfer" className="rounded-full border border-border bg-white px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/35 hover:text-primary">
+                Führung & Transfer
+              </Link>
+              <Link href="#bosch" className="rounded-full border border-border bg-white px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/35 hover:text-primary">
+                Bosch-Empfehlung
+              </Link>
+            </nav>
 
             <div className="mt-12 space-y-8">
               {testimonialGroups.map((group) => (
-                <section key={group.id} className="rounded-[30px] border border-border/70 bg-white p-6 shadow-[0_12px_35px_rgba(16,33,43,0.04)] sm:p-8">
+                <section id={group.id} key={group.id} className="scroll-mt-24 rounded-[30px] border border-border/70 bg-white p-6 shadow-[0_12px_35px_rgba(16,33,43,0.04)] sm:p-8">
                   <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Kontext</p>
@@ -292,7 +313,7 @@ export default function ReferenzenStimmenPage() {
               ))}
             </div>
 
-            <article className="mt-8 rounded-[30px] border border-border/70 bg-[#102f42] p-8 text-white shadow-[0_20px_60px_rgba(16,33,43,0.12)] sm:p-10">
+            <article id="bosch" className="mt-8 scroll-mt-24 rounded-[30px] border border-border/70 bg-[#102f42] p-8 text-white shadow-[0_20px_60px_rgba(16,33,43,0.12)] sm:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/72">{boschRecommendation.number} · Referenz & Erfahrung</p>
               <h3 className="mt-5 font-display text-3xl font-light leading-tight sm:text-4xl">{boschRecommendation.title}</h3>
               <blockquote className="mt-6 max-w-5xl font-display text-[1.45rem] font-light italic leading-[1.7] text-white/90">„{boschRecommendation.quote}“</blockquote>
@@ -307,7 +328,10 @@ export default function ReferenzenStimmenPage() {
               <div>
                 <SectionEyebrow>Referenzerfahrung</SectionEyebrow>
                 <h2 className="mt-5 font-display text-4xl font-light leading-tight tracking-[-0.03em]">Ausgewählte technische Unternehmen</h2>
-                <p className="mt-5 text-base leading-8 text-muted-foreground">Die Namen dokumentieren Arbeitskontexte. Sie sind kein Ersatz für die konkreten Stimmen und Praxisbeispiele.</p>
+                <p className="mt-5 text-base leading-8 text-muted-foreground">
+                  Diese Auswahl zeigt Erfahrung in unterschiedlichen technischen Branchen, Unternehmensgrößen und
+                  Aufgabenfeldern.
+                </p>
               </div>
               <div className="flex flex-wrap gap-3">
                 {clientReferences.map((client) => (

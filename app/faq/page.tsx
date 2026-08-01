@@ -251,10 +251,7 @@ export default function FaqPage() {
                       >
                         <summary className="flex min-w-0 cursor-pointer list-none items-start justify-between gap-4">
                           <div className="min-w-0">
-                            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-                              Kurzantwort
-                            </p>
-                            <h3 className="mt-3 font-display text-2xl font-medium leading-snug text-foreground [overflow-wrap:anywhere] sm:text-[1.85rem]">
+                            <h3 className="font-display text-2xl font-medium leading-snug text-foreground [overflow-wrap:anywhere] sm:text-[1.85rem]">
                               {item.question}
                             </h3>
                             <p className="mt-4 max-w-3xl text-base leading-7 text-muted-foreground">

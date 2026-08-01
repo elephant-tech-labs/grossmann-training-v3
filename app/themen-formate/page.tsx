@@ -106,7 +106,8 @@ const proofQuote = {
     "Deine Techniken kann ich nicht nur beruflich, sondern auch privat anwenden. Besonders die Tipps zur Konfliktlösung, aber auch generell die Wirkung der eigenen Sprache, sind unfassbar hilfreich.",
   author: "Maximilian Sebald",
   role: "Junior Commercial Program Manager, RAUMEDIC AG",
-  context: "Empfohlene Zuordnung laut Arbeitsdokument: Themen & Veranstaltungsformen sowie Führung/Konflikt.",
+  context:
+    "Praxisstimme zu Konfliktlösung, persönlicher Wirkung und dem Transfer in den Arbeitsalltag.",
 }
 
 export const metadata: Metadata = {
@@ -257,7 +258,7 @@ export default function ThemenFormatePage() {
               </div>
 
               <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_18px_55px_rgba(16,33,43,0.05)]">
-                <div className="grid border-b border-border/70 bg-[#fcfbf8] md:grid-cols-[0.8fr_1fr_1fr_1fr]">
+                <div className="hidden border-b border-border/70 bg-[#fcfbf8] md:grid md:grid-cols-[0.8fr_1fr_1fr_1fr]">
                   <div className="px-5 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
                     Orientierung
                   </div>
@@ -274,9 +275,24 @@ export default function ThemenFormatePage() {
                     <div className="bg-white px-5 py-5 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
                       {row.label}
                     </div>
-                    <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">{row.seminar}</div>
-                    <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">{row.development}</div>
-                    <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">{row.coaching}</div>
+                    <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">
+                      <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-primary md:hidden">
+                        Seminar
+                      </span>
+                      {row.seminar}
+                    </div>
+                    <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">
+                      <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-primary md:hidden">
+                        Team- & Niederlassungsentwicklung
+                      </span>
+                      {row.development}
+                    </div>
+                    <div className="bg-white px-5 py-5 text-sm leading-7 text-muted-foreground">
+                      <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-primary md:hidden">
+                        Coaching
+                      </span>
+                      {row.coaching}
+                    </div>
                   </div>
                 ))}
               </div>

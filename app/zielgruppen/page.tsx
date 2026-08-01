@@ -28,6 +28,8 @@ const groups = [
     secondaryLabel: "Praxisbeispiel Service ansehen",
     imageSrc: "/images/grossmann-v4/audience-service-technicians.png",
     imageAlt: "Servicetechniker in einer praxisnahen Trainingssituation",
+    caption:
+      "Praxisübung mit Servicetechnikern: technische Inhalte verständlich und kundengerecht vermitteln.",
   },
   {
     id: "projekt-objekt",
@@ -50,6 +52,8 @@ const groups = [
     secondaryLabel: "Projektbeispiel ansehen",
     imageSrc: "/images/grossmann-v4/audience-order-managers.jpg",
     imageAlt: "Arbeitsgruppe aus einem Training für Objekt- und Auftragsleitung",
+    caption:
+      "Arbeitsgruppe aus dem Projektumfeld: Gesprächsführung, Abstimmung und Verhandlung im realen Kontext.",
   },
   {
     id: "technische-fuehrung",
@@ -72,6 +76,7 @@ const groups = [
     secondaryLabel: "Formate für Führung ansehen",
     imageSrc: "/images/grossmann-v4/audience-technical-leaders.png",
     imageAlt: "Training für Bauleiter und technische Führungskräfte",
+    caption: "Führungssituation im Seminar: Klarheit, Präsenz und Rückmeldung praktisch erproben.",
   },
   {
     id: "teams-niederlassungen",
@@ -92,8 +97,9 @@ const groups = [
     primaryLabel: "Entwicklungsbeispiel ansehen",
     secondaryHref: "/themen-formate",
     secondaryLabel: "Teamformate ansehen",
-    imageSrc: "/images/grossmann-v4/audience-teams-branches.jpeg",
+    imageSrc: "/images/grossmann/reserve-teams-group-proof.jpeg",
     imageAlt: "Team aus einem Entwicklungsformat für technische Niederlassungen",
+    caption: "Gemeinsamer Trainingsabschluss: Entwicklung über Rollen und Schnittstellen hinweg.",
   },
   {
     id: "unternehmen",
@@ -116,6 +122,8 @@ const groups = [
     secondaryLabel: "Inhouse-Vorhaben besprechen",
     imageSrc: "/images/grossmann-v4/format-team-development.jpg",
     imageAlt: "Gemeinsame Arbeit in einem technischen Entwicklungsprogramm",
+    caption:
+      "Mehrere Zielgruppen gemeinsam entwickeln: vom Einzeltraining zur abgestimmten Inhouse-Reihe.",
   },
   {
     id: "hotline",
@@ -138,6 +146,8 @@ const groups = [
     secondaryLabel: "Hotline-Situation besprechen",
     imageSrc: "/images/grossmann-v4/audience-hotline.png",
     imageAlt: "Praxisarbeit für technische Hotline und telefonischen Kundenkontakt",
+    caption:
+      "Gesprächsarbeit unter Druck: zuhören, strukturieren und technische Inhalte verständlich vermitteln.",
   },
 ]
 
@@ -260,24 +270,9 @@ export default function ZielgruppenPage() {
                             />
                           </div>
                           <figcaption className="border-t border-border/70 bg-[#fcfbf8] px-4 py-3 text-sm leading-6 text-muted-foreground">
-                            Reale Trainings- und Arbeitssituation aus dem jeweiligen technischen Umfeld.
+                            {group.caption}
                           </figcaption>
                         </figure>
-
-                        <div className="mt-7 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-                          <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
-                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Typische Lage</p>
-                            <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">{group.situation}</p>
-                          </div>
-                          <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
-                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Nähe zum Kunden</p>
-                            <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">{group.proximity}</p>
-                          </div>
-                          <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5 md:col-span-2 xl:col-span-1">
-                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Passende Formate</p>
-                            <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">{group.formats}</p>
-                          </div>
-                        </div>
 
                         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                           {group.href ? (
@@ -300,7 +295,7 @@ export default function ZielgruppenPage() {
                         </div>
                       </div>
 
-                      <div className="white-card p-6 sm:p-7">
+                      <div className="white-card flex flex-col p-6 sm:p-7">
                         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">Schwerpunkte</p>
                         <p className="mt-3 text-sm leading-7 text-muted-foreground">
                           Typische Arbeitsschwerpunkte, die in dieser Rolle im Alltag besonders wirksam werden.
@@ -312,6 +307,38 @@ export default function ZielgruppenPage() {
                             </li>
                           ))}
                         </ul>
+
+                        <div className="mt-7 border-t border-border/70 pt-6">
+                          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+                            Auf einen Blick
+                          </p>
+                          <div className="mt-4 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 2xl:grid-cols-3">
+                            <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
+                              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                                Typische Lage
+                              </p>
+                              <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">
+                                {group.situation}
+                              </p>
+                            </div>
+                            <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
+                              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                                Nähe zum Kunden
+                              </p>
+                              <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">
+                                {group.proximity}
+                              </p>
+                            </div>
+                            <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">
+                              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                                Passende Formate
+                              </p>
+                              <p className="mt-3 text-sm leading-7 text-muted-foreground [overflow-wrap:anywhere]">
+                                {group.formats}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </section>

@@ -120,8 +120,8 @@ export default function ContactPage() {
                   Diese Angaben helfen beim ersten Sortieren
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
-                  Bis das Anfrageformular ergänzt ist, können Sie diese Informationen einfach per E-Mail senden. Sie
-                  müssen noch kein fertiges Briefing haben - eine kurze Beschreibung Ihrer Situation reicht aus.
+                  Für eine gezielte erste Einschätzung können Sie diese Informationen einfach per E-Mail senden. Ein
+                  fertiges Briefing ist nicht nötig - eine kurze Beschreibung Ihrer Situation reicht aus.
                 </p>
 
                 <div className="mt-8 rounded-[28px] border border-border/80 bg-[#faf8f3] p-7 sm:p-8">
