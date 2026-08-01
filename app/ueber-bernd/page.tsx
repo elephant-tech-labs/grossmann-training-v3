@@ -51,7 +51,7 @@ const perspectiveCards = [
   },
   {
     title: "Ehrenamt",
-    body: "Weiterbildung für Betreuer und Coaching im Umfeld des Bunds Deutscher Einsatzveteranen e.V.",
+    body: "Weiterbildung für Betreuer und Coaching im Umfeld des Bunds Deutscher Einsatzveteranen e.V. Verantwortung, Kameradschaft und Dienst sind auch in der Familiengeschichte verankert.",
   },
   {
     title: "Zusammenarbeit",
@@ -75,10 +75,10 @@ export default function UeberBerndPage() {
               <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_25px_75px_rgba(16,33,43,0.08)]">
                 <div className="relative aspect-[4/5] min-h-[360px]">
                   <Image
-                    src="/images/grossmann/reserve-contact-bernd-grossmann.png"
-                    alt="Bernd Grossmann in einem Porträt aus dem Trainingskontext"
+                    src="/images/grossmann-v4/bernd-brand-portrait.png"
+                    alt="Bernd Grossmann vor dem Grossmann Training Firmenbanner"
                     fill
-                    className="object-cover object-[20%_center]"
+                    className="object-cover object-left"
                     sizes="(max-width: 1024px) 100vw, 45vw"
                   />
                 </div>
@@ -90,7 +90,7 @@ export default function UeberBerndPage() {
               <div>
                 <SectionEyebrow>Über Bernd Grossmann</SectionEyebrow>
                 <h1 className="mt-5 max-w-3xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-6xl">
-                  Seit 1994 Arbeit mit Service- und Führungsteams in technischen Umfeldern
+                  Seit 1994 arbeitet Bernd Grossmann mit Service- und Führungsteams in technischen Umfeldern
                 </h1>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground">
                   Bernd Grossmann arbeitet dort, wo technische Exzellenz auf Kundenkontakt, Verantwortung,
@@ -115,7 +115,7 @@ export default function UeberBerndPage() {
           </div>
         </section>
 
-        <section className="bg-white py-18 sm:py-24">
+        <section id="qualifikation" className="scroll-mt-24 bg-white py-18 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
               <div>
@@ -127,6 +127,20 @@ export default function UeberBerndPage() {
                   Die fachlichen Grundlagen sind nicht Selbstzweck. Relevant ist, was davon im Gespräch, in Führung
                   und im Kundenkontakt praktisch wirksam wird.
                 </p>
+                <figure className="mt-8 overflow-hidden rounded-[26px] border border-border/70 bg-white shadow-[0_16px_45px_rgba(16,33,43,0.05)]">
+                  <div className="relative aspect-[4/5] min-h-[300px]">
+                    <Image
+                      src="/images/grossmann-v4/bernd-with-michael-grinder.jpg"
+                      alt="Bernd Grossmann mit Michael Grinder"
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 1024px) 100vw, 38vw"
+                    />
+                  </div>
+                  <figcaption className="border-t border-border/70 bg-[#fcfbf8] px-5 py-4 text-sm leading-6 text-muted-foreground">
+                    Bernd Grossmann mit Michael Grinder - fachlicher Bezug zu Microskills, Präsenz und Wirkung.
+                  </figcaption>
+                </figure>
               </div>
               <div className="grid gap-4">
                 {qualifications.map((item) => (
@@ -144,18 +158,18 @@ export default function UeberBerndPage() {
           </div>
         </section>
 
-        <section className="border-y border-border/70 bg-[#f3efe6] py-18 sm:py-24">
+        <section id="kollegen" className="scroll-mt-24 border-y border-border/70 bg-[#f3efe6] py-18 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
               <div>
-                <SectionEyebrow>Was das für Auftraggeber bedeutet</SectionEyebrow>
+                <SectionEyebrow>Grossmann Training & Kollegen</SectionEyebrow>
                 <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
-                  Erfahrung, Haltung und Umsetzungsstärke greifen zusammen
+                  Persönlich geführt, bei größeren Vorhaben sinnvoll erweiterbar
                 </h2>
                 <p className="mt-5 max-w-xl text-base leading-8 text-muted-foreground">
-                  Die persönliche Biografie ist nur relevant, wenn sie im Projektalltag spürbar wird. Genau dort setzt
-                  die Arbeit an: im technischen Umfeld, in schwierigen Gesprächen und in Situationen mit echter
-                  Verantwortung.
+                  Für größere Entwicklungsprogramme können weitere erfahrene Trainer eingebunden werden. Das eignet
+                  sich für Team- und Niederlassungsentwicklung, parallele Maßnahmen und größere Organisationseinheiten.
+                  Konzeption, Qualitätsanspruch und persönliche Verantwortung bleiben bei Bernd Grossmann gebündelt.
                 </p>
               </div>
 
@@ -163,7 +177,7 @@ export default function UeberBerndPage() {
                 {perspectiveCards.map((item) => (
                   <div key={item.title} className="white-card p-7">
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">{item.title}</p>
-                    <p className="mt-5 text-base leading-8 text-muted-foreground">{item.body}</p>
+                    <p className="mt-5 text-base leading-8 text-muted-foreground [overflow-wrap:anywhere]">{item.body}</p>
                   </div>
                 ))}
               </div>

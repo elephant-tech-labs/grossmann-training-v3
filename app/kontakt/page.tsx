@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, CheckCircle2, Mail, Phone } from "lucide-react"
 import PageCtaPanel from "@/components/page-cta-panel"
@@ -48,6 +49,21 @@ export default function ContactPage() {
                   Wenn Sie lieber direkt schreiben oder anrufen möchten, können Sie genau das tun. Der Kontakt soll so
                   einfach sein wie das erste Sortieren Ihrer Situation.
                 </p>
+
+                <figure className="mt-8 overflow-hidden rounded-[24px] border border-border/70 bg-white">
+                  <div className="relative aspect-[16/10] min-h-[260px]">
+                    <Image
+                      src="/images/grossmann-v4/bernd-brand-portrait.png"
+                      alt="Bernd Grossmann vor dem Grossmann Training Firmenbanner"
+                      fill
+                      className="object-cover object-[42%_center]"
+                      sizes="(max-width: 1024px) 100vw, 42vw"
+                    />
+                  </div>
+                  <figcaption className="border-t border-border/70 bg-[#fcfbf8] px-5 py-4 text-sm leading-6 text-muted-foreground">
+                    Ihr Ansprechpartner: Bernd Grossmann.
+                  </figcaption>
+                </figure>
 
                 <div className="mt-8 grid gap-4">
                   <a
@@ -99,31 +115,30 @@ export default function ContactPage() {
               </div>
 
               <div className="white-card p-7 sm:p-8 lg:p-10">
-                <SectionEyebrow>Zoho-Formular</SectionEyebrow>
+                <SectionEyebrow>Anfrage vorbereiten</SectionEyebrow>
                 <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-4xl">
-                  Platzhalter für das spätere Anfrageformular
+                  Diese Angaben helfen beim ersten Sortieren
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
-                  Diese Fläche ist bewusst so vorbereitet, dass das Zoho-Formular später sauber eingebettet werden
-                  kann, ohne die visuelle Ruhe der Seite zu verlieren.
+                  Bis das Anfrageformular ergänzt ist, können Sie diese Informationen einfach per E-Mail senden. Sie
+                  müssen noch kein fertiges Briefing haben - eine kurze Beschreibung Ihrer Situation reicht aus.
                 </p>
 
-                <div className="mt-8 rounded-[28px] border border-dashed border-border/80 bg-[#faf8f3] p-7 sm:p-8">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-                    [ZOHO_FORM_EMBED]
-                  </p>
-                  <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                    Hier wird später die eingebettete Zoho-Form platziert. Der Container ist bereits auf eine ruhige,
-                    hochwertige Formularpräsentation ausgelegt.
-                  </p>
-
-                  <div className="mt-7 grid gap-4 sm:grid-cols-2">
+                <div className="mt-8 rounded-[28px] border border-border/80 bg-[#faf8f3] p-7 sm:p-8">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     {formFields.map((item) => (
                       <div key={item} className="rounded-[20px] border border-border/70 bg-white px-4 py-4 text-sm text-muted-foreground">
                         {item}
                       </div>
                     ))}
                   </div>
+                  <a
+                    href="mailto:info@grossmann-training.de?subject=Anfrage%20Grossmann%20Training"
+                    className="btn-brand mt-7 w-full sm:w-auto"
+                  >
+                    Anfrage per E-Mail senden
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
                 </div>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">

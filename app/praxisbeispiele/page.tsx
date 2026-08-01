@@ -12,7 +12,7 @@ const cases = [
     id: "siemens",
     navLabel: "Siemens",
     title: "Siemens AG",
-    imageSrc: "/images/grossmann/home-case-technical-discussion.jpg",
+    imageSrc: "/images/grossmann-v4/case-negotiation.png",
     imageAlt: "Diskussions- und Arbeitsszene aus einem technischen Seminarumfeld",
     subtitle: "Wenn technische Exzellenz plötzlich Verhandlungskompetenz braucht",
     audience: "Projektnahe Fach- und Vertriebsrollen",
@@ -36,7 +36,7 @@ const cases = [
     id: "service",
     navLabel: "Service",
     title: "Servicetechniker im Kundenkontakt",
-    imageSrc: "/images/grossmann/service-seminar-team-photo.png",
+    imageSrc: "/images/grossmann-v4/case-service-contact.png",
     imageAlt: "Bernd Grossmann mit Teilnehmenden aus dem Serviceumfeld nach einem Seminar",
     subtitle: "Techniker werden zu Botschaftern zwischen Technik, Betrieb und Kunde",
     audience: "Servicetechniker & Monteure",
@@ -58,7 +58,7 @@ const cases = [
     id: "fuehrung",
     navLabel: "Führung",
     title: "Bauleiter & technische Führungskräfte",
-    imageSrc: "/images/grossmann/practice-leadership-seminar-board.jpg",
+    imageSrc: "/images/grossmann-v4/case-technical-leadership.jpg",
     imageAlt: "Bernd Grossmann vor einer Seminarübersicht für technische Führung und Gesprächsführung",
     subtitle: "Technische Stärke in Führungswirkung übersetzen",
     audience: "Bauleiter & technische Führungskräfte",
@@ -79,7 +79,7 @@ const cases = [
     id: "teams",
     navLabel: "Teams",
     title: "Team- & Niederlassungsentwicklung",
-    imageSrc: "/images/grossmann/practice-team-workshop-discussion.jpg",
+    imageSrc: "/images/grossmann-v4/case-team-development.jpg",
     imageAlt: "Diskussion und Gruppenarbeit in einem Workshop zur Team- und Niederlassungsentwicklung",
     subtitle: "Vom Einzeltraining zum Entwicklungsprogramm",
     audience: "Teams, Niederlassungen, Schnittstellen",
@@ -100,7 +100,7 @@ const cases = [
     id: "schnittstellen",
     navLabel: "Schnittstellen",
     title: "Zusammenarbeit Innen- und Außendienst",
-    imageSrc: "/images/grossmann/practice-internal-external-dialogue.jpeg",
+    imageSrc: "/images/grossmann-v4/case-interface-work.jpeg",
     imageAlt: "Dialogszene aus einem Workshop zur Zusammenarbeit zwischen Innen- und Außendienst",
     subtitle: "Wenn Service, Projekt und Vertrieb dieselbe Sprache brauchen",
     audience: "Service, Innendienst, Projekt, Vertrieb",
@@ -137,10 +137,11 @@ const caseOverview = [
 
 const proofQuote = {
   eyebrow: "Stimme aus der Praxis",
-  quote:
-    "Nach diesem Pilotseminar haben wir sofort vier weitere Trainings beauftragt. Das Feedback der Techniker und des Serviceteams war herausragend.",
+  quote: "Ich bin ... sprachlos!",
   author: "Stefan Zöller",
   role: "Head of NL Stuttgart Service & FM, R.O.M. Technik",
+  context:
+    "Dieser erste Satz fiel nach dem Pilotseminar. Danach folgten vier weitere Seminare, mehrere Vertriebstage sowie Führungs- und Verhandlungstrainings.",
 }
 
 export const metadata: Metadata = {
@@ -280,6 +281,7 @@ export default function PraxisbeispielePage() {
                         <blockquote className="font-display text-[1.55rem] font-light italic leading-[1.7] text-white/88 sm:text-[1.85rem]">
                           "{proofQuote.quote}"
                         </blockquote>
+                        <p className="mt-5 text-base leading-8 text-white/82">{proofQuote.context}</p>
                         <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-white/82">{proofQuote.author}</p>
                         <p className="mt-2 text-sm leading-7 text-white/82">{proofQuote.role}</p>
                       </div>

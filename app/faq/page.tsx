@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import PageCtaPanel from "@/components/page-cta-panel"
@@ -83,9 +84,9 @@ const faqGroups = [
       },
       {
         question: "Wie groß sind die Gruppen?",
-        shortAnswer: "Bevorzugt werden überschaubare Gruppen, damit echte Situationen bearbeitet werden können.",
+        shortAnswer: "Bevorzugt wird mit bis zu maximal zehn Teilnehmenden gearbeitet.",
         answer:
-          "Gerade bei sensiblen Kunden- und Führungsthemen ist Beteiligung, Reflexion und individuelle Rückmeldung ein Qualitätsfaktor. Deshalb wird in Formaten gearbeitet, die Raum für echte Fälle und sichtbare Entwicklung lassen.",
+          "Bis maximal zehn Teilnehmende bleibt ausreichend Raum für reale Praxisfälle, Übungen, Feedback und individuelle Entwicklung. Bei größeren Einheiten wird gemeinsam geprüft, welche Aufteilung oder Formatlogik sinnvoll ist.",
         links: [
           { href: "/themen-formate", label: "Formatlogik ansehen" },
         ],
@@ -105,6 +106,45 @@ const faqGroups = [
         links: [
           { href: "/themen-formate", label: "Themen & Formate ansehen" },
           { href: "/zielgruppen", label: "Zielgruppen ansehen" },
+        ],
+      },
+      {
+        question: "Wie nachhaltig ist die Maßnahme?",
+        shortAnswer: "Nachhaltigkeit entsteht durch geplanten Transfer, nicht allein durch den Seminartag.",
+        answer:
+          "Je nach Ausgangslage können Fotoprotokoll, Follow-up-Tag, Auffrischung, Coaching, Entwicklungsprogramme oder Führungskräftebegleitung eingesetzt werden. Entscheidend ist, welche Transferbausteine im Arbeitsalltag wirklich anschlussfähig sind.",
+        links: [
+          { href: "/themen-formate#formate", label: "Transfer und Formate ansehen" },
+        ],
+      },
+      {
+        question: "Gibt es auch Coaching für technische Führungskräfte?",
+        shortAnswer: "Ja, insbesondere für konkrete Führungs-, Konflikt- und Gesprächssituationen.",
+        answer:
+          "Typische Themen sind Mitarbeiterführung, schwierige Gespräche, Konflikte, Selbstbild und Fremdbild, Kommunikation unter Druck, Auftreten und Wirkung sowie die eigene Führungsrolle im technischen Umfeld.",
+        links: [
+          { href: "/themen-formate#coaching", label: "Persönliches Coaching ansehen" },
+          { href: "/zielgruppen#technische-fuehrung", label: "Technische Führung ansehen" },
+        ],
+      },
+      {
+        question: "Können auch ganze Niederlassungen oder Teams begleitet werden?",
+        shortAnswer: "Ja. Dafür können mehrere Zielgruppen und Maßnahmen sinnvoll verbunden werden.",
+        answer:
+          "Möglich sind Servicetechnikerentwicklung, Bauleiterprogramme, Projektleiterentwicklung, Team- und Niederlassungsentwicklung, Führungskräftecoaching sowie mehrstufige Entwicklungsprogramme.",
+        links: [
+          { href: "/zielgruppen#teams-niederlassungen", label: "Teams & Niederlassungen ansehen" },
+          { href: "/themen-formate#team-entwicklung", label: "Entwicklungsformate ansehen" },
+        ],
+      },
+      {
+        question: "Wie lässt sich der Erfolg einschätzen?",
+        shortAnswer: "Erfolg zeigt sich in beobachtbaren Veränderungen im Kundenkontakt und in der Zusammenarbeit.",
+        answer:
+          "Typische Hinweise sind Kundenrückmeldungen, Reklamationsverhalten, Zusammenarbeit, Gesprächsqualität, Auftreten und Eigenverantwortung. Welche Kriterien sinnvoll sind, wird passend zur Ausgangslage vorab eingegrenzt.",
+        links: [
+          { href: "/referenzen-stimmen", label: "Stimmen und Wirkung ansehen" },
+          { href: "/praxisbeispiele", label: "Praxisbeispiele ansehen" },
         ],
       },
     ],
@@ -157,6 +197,34 @@ export default function FaqPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border/70 bg-[#fbfaf6] py-12 sm:py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <figure className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_18px_55px_rgba(16,33,43,0.06)]">
+              <div className="grid lg:grid-cols-[1.2fr_0.8fr] lg:items-stretch">
+                <div className="relative aspect-[16/9] min-h-[280px] lg:aspect-auto">
+                  <Image
+                    src="/images/grossmann-v4/faq-training-context.png"
+                    alt="Bernd Grossmann mit Teilnehmern in einer realen Trainingssituation"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                  />
+                </div>
+                <figcaption className="flex flex-col justify-center p-7 sm:p-10">
+                  <SectionEyebrow>Fragen aus realen Situationen</SectionEyebrow>
+                  <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-4xl">
+                    Antworten bleiben nur dann hilfreich, wenn sie an der Praxis anschließen.
+                  </h2>
+                  <p className="mt-5 text-base leading-8 text-muted-foreground">
+                    Deshalb entstehen Inhalte, Übungen und Transfer aus den Fällen, Einwänden und Gesprächssituationen
+                    der jeweiligen technischen Teams.
+                  </p>
+                </figcaption>
+              </div>
+            </figure>
           </div>
         </section>
 

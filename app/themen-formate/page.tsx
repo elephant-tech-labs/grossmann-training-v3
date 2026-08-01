@@ -9,26 +9,31 @@ import SiteShell from "@/components/site-shell"
 
 const seminarTopics = [
   {
+    id: "kundenkontakt",
     label: "Service",
     title: "Servicetechniker im Kundenkontakt",
     body: "Wenn technische Kompetenz im direkten Kundenkontakt verständlich, ruhig und verbindlich wirken soll.",
   },
   {
+    id: "fuehrung",
     label: "Führung",
     title: "Führung im technischen Umfeld",
     body: "Für Führungskräfte, die Klarheit, Gefolgschaft und Gesprächssicherheit im Alltag stärken wollen.",
   },
   {
+    id: "verhandlung",
     label: "Projektgeschäft",
     title: "Verhandlungsführung & Besprechungsmoderation",
     body: "Für Projektleiter, Objektleiter und technische Ansprechpartner, die Gespräche wirksam steuern müssen.",
   },
   {
+    id: "mitarbeiterfuehrung",
     label: "Mitarbeiter",
     title: "Mitarbeiterführung",
     body: "Wenn Verantwortung übernommen wird und Präsenz, Rückmeldung und Verbindlichkeit an Gewicht gewinnen.",
   },
   {
+    id: "schnittstellenarbeit",
     label: "Zusammenarbeit",
     title: "Schnittstellenarbeit",
     body: "Wenn Service, Projekt, Innendienst und Führung in der Zusammenarbeit mehr gemeinsame Linie brauchen.",
@@ -37,18 +42,21 @@ const seminarTopics = [
 
 const formats = [
   {
+    id: "seminare",
     title: "Seminare",
     body: "Praxisnahe Trainings mit realen Situationen aus dem technischen Alltag. Für Service, Projekt, Führung und Kundenkontakt.",
     fit: "Gut, wenn ein gemeinsamer Startpunkt, klare Muster und ein fokussierter Rahmen gefragt sind.",
     scope: "Typisch: 1 bis 2 Tage, inhouse, mit Beispielen aus dem Alltag der Teilnehmenden.",
   },
   {
+    id: "team-entwicklung",
     title: "Team- & Niederlassungsentwicklung",
     body: "Teamtage, Niederlassungsworkshops und Entwicklungsprogramme, wenn gemeinsame Sprache und gemeinsame Haltung entstehen sollen.",
     fit: "Sinnvoll, wenn nicht nur Einzelpersonen, sondern Rollen, Teams und Schnittstellen entwickelt werden müssen.",
     scope: "Typisch: mehrstufige Zusammenarbeit mit Seminar, Follow-up, Workshop oder Transferbausteinen.",
   },
   {
+    id: "coaching",
     title: "Persönliches Coaching",
     body: "Tages- oder Halbtagestreffen für Führungssituationen, schwierige Gesprächsanlässe oder individuelle Schärfung von Wirkung und Klarheit.",
     fit: "Passend, wenn einzelne Personen konkrete Situationen, Rollenwechsel oder heikle Gespräche gezielt bearbeiten wollen.",
@@ -117,7 +125,7 @@ export default function ThemenFormatePage() {
           body="Nicht jedes Anliegen braucht dasselbe Format. Entscheidend ist, wie nah das Thema am Alltag der Teilnehmenden liegt und wie nachhaltig die Veränderung wirken soll."
         />
 
-        <section className="bg-white py-18 sm:py-24">
+        <section id="themen" className="scroll-mt-24 bg-white py-18 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
               <div>
@@ -137,6 +145,7 @@ export default function ThemenFormatePage() {
               {seminarTopics.map((topic, index) => (
                 <div
                   key={topic.title}
+                  id={topic.id}
                   className={`${index === 0 ? "lg:col-span-2" : ""} soft-card min-h-[220px] p-6 sm:p-7`}
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">{topic.label}</p>
@@ -150,7 +159,7 @@ export default function ThemenFormatePage() {
           </div>
         </section>
 
-        <section className="border-y border-border/70 bg-[#f3efe6] py-18 sm:py-24">
+        <section id="formate" className="scroll-mt-24 border-y border-border/70 bg-[#f3efe6] py-18 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
               <div>
@@ -170,8 +179,8 @@ export default function ThemenFormatePage() {
               <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_18px_55px_rgba(16,33,43,0.05)]">
                 <div className="relative aspect-[16/11] min-h-[220px] sm:min-h-[280px]">
                   <Image
-                    src="/images/grossmann/reserve-seminar-speaker-wide.png"
-                    alt="Seminarszene mit aktivem Vortrag im technischen Umfeld"
+                    src="/images/grossmann-v4/bernd-speaking.jpeg"
+                    alt="Bernd Grossmann im Gespräch während einer Trainingsveranstaltung"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 48vw"
@@ -188,7 +197,7 @@ export default function ThemenFormatePage() {
 
               <div className="grid gap-5">
                 {formats.map((item) => (
-                  <div key={item.title} className="white-card p-6 sm:p-7">
+                  <div key={item.title} id={item.id} className="white-card scroll-mt-24 p-6 sm:p-7">
                     <h3 className="font-display text-[1.9rem] font-medium leading-[1.08] tracking-[-0.03em] text-foreground [overflow-wrap:anywhere]">
                       {item.title}
                     </h3>

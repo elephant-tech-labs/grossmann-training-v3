@@ -23,7 +23,7 @@ export default function VideoTestimonial({ className = "", compact = false }: Vi
       {isPlaying ? (
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
-          title="Teilnehmerstimme: Training für Techniker im Kundenkontakt"
+          title="Kundenstimme eines Service Managers zum Training für Techniker im Kundenkontakt"
           className="absolute inset-0 h-full w-full border-0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
@@ -34,11 +34,11 @@ export default function VideoTestimonial({ className = "", compact = false }: Vi
           type="button"
           onClick={() => setIsPlaying(true)}
           className="group absolute inset-0 block h-full w-full cursor-pointer overflow-hidden text-left focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white"
-          aria-label="Teilnehmerstimme auf YouTube abspielen"
+          aria-label="Kundenstimme eines Service Managers auf YouTube abspielen"
         >
           <Image
             src="/images/grossmann/youtube-testimonial-techniker-kundenkontakt-thumbnail.jpg"
-            alt="Teilnehmerstimme zum Training für Techniker im Kundenkontakt"
+            alt="Kundenstimme eines Service Managers zum Training für Techniker im Kundenkontakt"
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-[1.015]"
             sizes={compact ? "(max-width: 1024px) 100vw, 58vw" : "(max-width: 1024px) 100vw, 64vw"}

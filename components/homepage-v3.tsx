@@ -84,11 +84,11 @@ const clientLogos = ["Siemens", "Bosch", "Continental", "AVL", "DMG MORI", "REHA
 const homepageProof = {
   eyebrow: "Stimme aus der Praxis",
   quote:
-    "Dieses Jahr haben wir rund 25 Techniker zu einem dieser Entwicklungs-Seminare geschickt. Kommendes Jahr schicken wir die nächsten 25 Kollegen.",
+    "Dieses Jahr haben wir rund 25 Techniker zu einem dieser Entwicklungs-Seminare geschickt. Das Ganze mit spürbarem Erfolg, was Einsatzbereitschaft, Verstehen von Situationen und Erkennen der positiven Absicht angeht - auch wenn es heikel wird. Kommendes Jahr schicken wir die nächsten 25 Kollegen und frischen das Gelernte parallel bei den Kollegen auf, die bereits teilgenommen haben.",
   author: "Dirk Wolfgang Dietrich",
   role: "Teamleiter Wartung & Service",
-  proofLabel: "Sichtbare Wirkung",
-  proofValue: "25 weitere Techniker folgen",
+  proofLabel: "Weiterführung durch den Auftraggeber",
+  proofValue: "Weitere 25 Kollegen und eine parallele Auffrischung sind vorgesehen.",
 }
 
 const testimonials = [
@@ -102,8 +102,9 @@ const testimonials = [
   },
   {
     title: "Pilotseminar mit Folgewirkung",
-    quote:
-      "Ich bin sprachlos. Nach diesem Seminar folgten vier weitere Seminare sowie weitere Trainingsformate für Projektleiter, Key Account Manager und Bauleiter.",
+    quote: "Ich bin ... sprachlos!",
+    context:
+      "Dieser erste Satz des Serviceleiters fiel nach dem Pilotseminar. Danach folgten vier weitere Seminare, Vertriebstage sowie Führungs- und Verhandlungstrainings.",
     author: "Stefan Zöller",
     role: "Leitung NL Stuttgart Service & FM",
     company: "R.O.M. Rud. Otto Meyer Technik GmbH & Co. KG",
@@ -115,37 +116,51 @@ export default function HomepageV3() {
     <main className="bg-background text-foreground">
       <section className="overflow-hidden bg-[#faf8f3] pt-32" aria-labelledby="hero-heading">
         <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-22">
-          <div className="grid gap-10 border-b border-border/70 pb-12 lg:grid-cols-12 lg:gap-12 lg:pb-14">
-            <div className="lg:col-span-8">
-              <SectionEyebrow>Für FM/TGA, technischen Service und Führung im technischen Umfeld</SectionEyebrow>
+          <div className="grid gap-10 border-b border-border/70 pb-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-14 lg:pb-14">
+            <div>
+              <SectionEyebrow>Grossmann Training</SectionEyebrow>
               <h1
                 id="hero-heading"
-                className="mt-7 max-w-5xl font-display text-[clamp(3rem,6.7vw,6.7rem)] font-light leading-[0.9] tracking-[-0.045em] text-foreground"
+                className="mt-7 max-w-5xl font-display text-[clamp(3rem,6.1vw,6.3rem)] font-light leading-[0.92] tracking-[-0.045em] text-foreground"
               >
-                Technik funktioniert.
-                <span className="block pl-[clamp(0.5rem,4vw,4rem)] italic text-primary">Zusammenarbeit</span>
-                <span className="block">entscheidet.</span>
+                Wirksamkeit im Kundenkontakt{" "}
+                <span className="block italic text-primary">für technische Teams.</span>
               </h1>
+              <p className="mt-7 max-w-2xl font-display text-2xl font-light leading-snug text-foreground sm:text-3xl">
+                Technische Kompetenz schafft Leistung. Kommunikation schafft Wirkung.
+              </p>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
+                Grossmann Training unterstützt Menschen und Organisationen dort, wo Technik auf Kunden, Führung und
+                Zusammenarbeit trifft.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link href="/kontakt" className="btn-brand">
+                  Erstgespräch vereinbaren
+                </Link>
+                <Link href="/praxisbeispiele" className="btn-brand-outline">
+                  Praxisbeispiele ansehen
+                </Link>
+              </div>
             </div>
 
-            <div className="lg:col-span-4 lg:pt-10">
-              <div className="soft-card p-6 sm:p-7">
-                <p className="max-w-sm text-base leading-8 text-muted-foreground">
-                  Grossmann Training unterstützt Menschen und Organisationen dort, wo Technik auf Kunden, Führung und
-                  Zusammenarbeit trifft. Technische Kompetenz schafft Leistung. Kommunikation schafft Wirkung.
+            <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_24px_70px_rgba(16,33,43,0.09)]">
+              <div className="relative aspect-[5/4] min-h-[320px]">
+                <Image
+                  src="/images/grossmann-v4/bernd-brand-portrait.png"
+                  alt="Bernd Grossmann vor dem Grossmann Training Firmenbanner"
+                  fill
+                  priority
+                  className="object-cover object-[42%_center]"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
+              </div>
+              <div className="border-t border-border/70 bg-[#fcfbf8] px-6 py-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Bernd Grossmann persönlich</p>
+                <p className="mt-2 text-base leading-7 text-muted-foreground">
+                  Seit 1994 in technischen Service-, Führungs- und Projektumfeldern.
                 </p>
-
-                <div className="mt-7 flex flex-col gap-3">
-                  <Link href="/kontakt" className="btn-brand">
-                    Erstgespräch vereinbaren
-                  </Link>
-                  <Link href="/praxisbeispiele" className="btn-brand-outline">
-                    Praxisbeispiele ansehen
-                  </Link>
-                </div>
-
-                <div className="mt-7 border-t border-border/70 pt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                  Seit 1994 · FM/TGA · Technischer Kundendienst · Technische Führung
+                <div className="mt-4 border-t border-border/70 pt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  FM/TGA · Technischer Kundendienst · Technische Führung
                 </div>
               </div>
             </div>
@@ -312,7 +327,7 @@ export default function HomepageV3() {
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative min-h-[320px]">
                 <Image
-                  src="/images/grossmann/home-case-technical-discussion.jpg"
+                  src="/images/grossmann-v4/case-negotiation.png"
                   alt="Trainingssituation aus einem technischen Projekt- und Verhandlungskontext"
                   fill
                   className="object-cover"
@@ -440,10 +455,10 @@ export default function HomepageV3() {
           <div className="overflow-hidden rounded-[30px] border border-border/70 bg-white shadow-[0_25px_75px_rgba(16,33,43,0.08)]">
             <div className="relative aspect-[4/5] min-h-[340px]">
               <Image
-                src="/images/grossmann/reserve-faq-bernd-speaking.jpeg"
+                src="/images/grossmann-v4/bernd-speaking.jpeg"
                 alt="Bernd Grossmann vor einer Trainingsvisualisierung"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
@@ -524,12 +539,13 @@ export default function HomepageV3() {
             <VideoTestimonial compact />
 
             <div className="flex flex-col justify-center rounded-[28px] border border-border/70 bg-white p-7 shadow-[0_18px_55px_rgba(16,33,43,0.06)] sm:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Videostimme</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Kundenstimme im Video</p>
               <h3 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] text-foreground">
-                Wirkung wird glaubwürdig, wenn Teilnehmer selbst berichten.
+                Ein Service Manager berichtet aus Auftraggebersicht.
               </h3>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                Eine persönliche Stimme aus einem Training für Techniker im Kundenkontakt.
+                Als Kunde und Auftraggeber schildert er seine Erfahrung mit dem Training für Techniker im
+                Kundenkontakt. Er ist kein Seminarteilnehmer.
               </p>
               <p className="mt-4 text-xs leading-6 text-muted-foreground">
                 Mit dem Abspielen wird eine Verbindung zu YouTube hergestellt.
@@ -556,6 +572,9 @@ export default function HomepageV3() {
                 <p className="font-display text-[clamp(1.2rem,2vw,1.8rem)] font-light italic leading-[1.65] text-foreground/80">
                   „{item.quote}“
                 </p>
+                {"context" in item ? (
+                  <p className="mt-4 text-base leading-8 text-muted-foreground">{item.context}</p>
+                ) : null}
                 <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
                   {item.author} · {item.role} · {item.company}
                 </p>

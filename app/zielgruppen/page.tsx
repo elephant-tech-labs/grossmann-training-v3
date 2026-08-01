@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, BriefcaseBusiness, Building2, Headset, MessageSquareText, Users, Wrench } from "lucide-react"
 import PageCtaPanel from "@/components/page-cta-panel"
@@ -25,6 +26,8 @@ const groups = [
     href: "/servicetechniker",
     secondaryHref: "/praxisbeispiele#service",
     secondaryLabel: "Praxisbeispiel Service ansehen",
+    imageSrc: "/images/grossmann-v4/audience-service-technicians.png",
+    imageAlt: "Servicetechniker in einer praxisnahen Trainingssituation",
   },
   {
     id: "projekt-objekt",
@@ -45,6 +48,8 @@ const groups = [
     primaryLabel: "Passendes Format ansehen",
     secondaryHref: "/praxisbeispiele#siemens",
     secondaryLabel: "Projektbeispiel ansehen",
+    imageSrc: "/images/grossmann-v4/audience-order-managers.jpg",
+    imageAlt: "Arbeitsgruppe aus einem Training für Objekt- und Auftragsleitung",
   },
   {
     id: "technische-fuehrung",
@@ -65,6 +70,8 @@ const groups = [
     primaryLabel: "Praxisbeispiel Führung ansehen",
     secondaryHref: "/themen-formate",
     secondaryLabel: "Formate für Führung ansehen",
+    imageSrc: "/images/grossmann-v4/audience-technical-leaders.png",
+    imageAlt: "Training für Bauleiter und technische Führungskräfte",
   },
   {
     id: "teams-niederlassungen",
@@ -85,6 +92,8 @@ const groups = [
     primaryLabel: "Entwicklungsbeispiel ansehen",
     secondaryHref: "/themen-formate",
     secondaryLabel: "Teamformate ansehen",
+    imageSrc: "/images/grossmann-v4/audience-teams-branches.jpeg",
+    imageAlt: "Team aus einem Entwicklungsformat für technische Niederlassungen",
   },
   {
     id: "unternehmen",
@@ -105,6 +114,8 @@ const groups = [
     primaryLabel: "Formatlogik ansehen",
     secondaryHref: "/kontakt",
     secondaryLabel: "Inhouse-Vorhaben besprechen",
+    imageSrc: "/images/grossmann-v4/format-team-development.jpg",
+    imageAlt: "Gemeinsame Arbeit in einem technischen Entwicklungsprogramm",
   },
   {
     id: "hotline",
@@ -125,6 +136,8 @@ const groups = [
     primaryLabel: "Formate für Hotline-Teams ansehen",
     secondaryHref: "/kontakt",
     secondaryLabel: "Hotline-Situation besprechen",
+    imageSrc: "/images/grossmann-v4/audience-hotline.png",
+    imageAlt: "Praxisarbeit für technische Hotline und telefonischen Kundenkontakt",
   },
 ]
 
@@ -219,7 +232,7 @@ export default function ZielgruppenPage() {
                 <div key={group.id} className="space-y-6">
                   <section
                     id={group.id}
-                    className="soft-card p-7 sm:p-9"
+                    className="soft-card scroll-mt-24 p-7 sm:p-9"
                   >
                     <div className="grid gap-8 lg:grid-cols-[0.94fr_1.06fr]">
                       <div>
@@ -235,6 +248,21 @@ export default function ZielgruppenPage() {
                           {group.title}
                         </h2>
                         <p className="mt-5 max-w-xl text-base leading-8 text-muted-foreground">{group.body}</p>
+
+                        <figure className="mt-7 overflow-hidden rounded-[24px] border border-border/70 bg-white">
+                          <div className="relative aspect-[16/9] min-h-[190px]">
+                            <Image
+                              src={group.imageSrc}
+                              alt={group.imageAlt}
+                              fill
+                              className="object-cover object-center"
+                              sizes="(max-width: 1024px) 100vw, 46vw"
+                            />
+                          </div>
+                          <figcaption className="border-t border-border/70 bg-[#fcfbf8] px-4 py-3 text-sm leading-6 text-muted-foreground">
+                            Reale Trainings- und Arbeitssituation aus dem jeweiligen technischen Umfeld.
+                          </figcaption>
+                        </figure>
 
                         <div className="mt-7 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                           <div className="rounded-[20px] border border-border/70 bg-[#fcfbf8] px-4 py-5">

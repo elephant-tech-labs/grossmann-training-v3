@@ -16,7 +16,13 @@ export default function HomeV3Footer() {
     <footer className="border-t border-white/10 bg-[#102f42] text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.9fr] lg:px-8">
         <div className="max-w-md">
-          <Image src="/images/logo_white.svg" alt="Grossmann Training" width={190} height={40} className="h-9 w-auto" />
+          <Image
+            src="/images/brand/grossmann-training-logo-white.svg"
+            alt="Grossmann Training"
+            width={216}
+            height={48}
+            className="h-11 w-auto"
+          />
           <p className="mt-5 text-sm leading-7 text-white/80">
             Wirksamkeit im Kundenkontakt für technische Teams. Ruhig, praxisnah und mit Blick auf das, was im Alltag
             wirklich trägt.

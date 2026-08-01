@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import PageCtaPanel from "@/components/page-cta-panel"
@@ -8,139 +7,179 @@ import SectionEyebrow from "@/components/section-eyebrow"
 import SiteShell from "@/components/site-shell"
 import VideoTestimonial from "@/components/video-testimonial"
 
+const clientReferences = [
+  "AVL",
+  "Bosch Thermotechnik",
+  "Caverion",
+  "Continental",
+  "DMG MORI",
+  "EnBW",
+  "Enercity",
+  "FESTO Lernzentrum",
+  "R.O.M. Technik",
+  "SAACKE",
+  "Siemens",
+  "SPIE",
+  "Viessmann",
+]
+
 const proofSignals = [
   {
-    label: "R.O.M. Technik",
-    value: "25 weitere Techniker folgen",
-    body: "Ein Entwicklungsseminar wurde direkt in einen weiteren Rollout überführt.",
+    label: "Weiterbeauftragung",
+    value: "Weitere 25 Kollegen",
+    body: "Nach dem ersten Rollout plant der Auftraggeber die Fortsetzung und eine parallele Auffrischung.",
   },
   {
-    label: "Pilot mit Wirkung",
+    label: "Pilot mit Folgewirkung",
     value: "4 weitere Seminare",
-    body: "Aus einem ersten Seminar entstanden zusätzliche Trainings für Führung, Vertrieb und Verhandlung.",
+    body: "Aus einem ersten Seminar entstanden zusätzliche Formate für Projekt, Führung und Verhandlung.",
   },
   {
     label: "Langfristige Zusammenarbeit",
     value: "Seit Jahren erfolgreich",
-    body: "Mehrjährige Zusammenarbeit und positives Teamfeedback statt einmaliger Einzelstimme.",
+    body: "Mehrjährige Zusammenarbeit belegt Anschlussfähigkeit über einzelne Maßnahmen hinaus.",
   },
 ]
 
 const featuredTestimonials = [
   {
-    eyebrow: "Hervorgehobene Stimme",
-    title: "Ein Kunde empfiehlt weiter und schickt die nächsten 25 Techniker",
+    number: "01",
+    eyebrow: "Ein Kunde empfiehlt weiter",
+    title: "Die nächsten 25 Techniker sind bereits vorgesehen",
     quote:
-      "Dieses Jahr haben wir rund 25 Techniker zu einem dieser Entwicklungs-Seminare geschickt. Das Ganze mit spürbarem Erfolg. Kommendes Jahr schicken wir die nächsten 25 Kollegen und frischen das Gelernte parallel bei den Kollegen auf, die bereits teilgenommen haben.",
+      "Dieses Jahr haben wir rund 25 Techniker zu einem dieser Entwicklungs-Seminare geschickt. Das Ganze mit spürbarem Erfolg, was Einsatzbereitschaft, Verstehen von Situationen und Erkennen der positiven Absicht angeht - auch wenn es heikel wird. Kommendes Jahr schicken wir die nächsten 25 Kollegen und frischen das Gelernte parallel bei den Kollegen auf, die bereits teilgenommen haben.",
     author: "Dirk Wolfgang Dietrich",
     role: "Teamleiter Wartung & Service",
-    company: "R.O.M. Rud. Otto Meyer Technik GmbH & Co. KG, Neu-Isenburg",
-    summary: "Repeat rollout und Auffrischung im Bestand statt einmaligem Seminar-Effekt.",
-    imageSrc: "/images/grossmann/service-seminar-team-photo.png",
-    imageAlt: "Teilnehmende eines Service-Seminars im technischen Umfeld",
-    ctaHref: "/praxisbeispiele#service",
-    ctaLabel: "Passendes Praxisbeispiel ansehen",
+    company: "Rud. Otto Meyer Technik GmbH & Co. KG, Neu-Isenburg",
+    initials: "DD",
+    context: "Kundenstimme eines Auftraggebers und Teamleiters, nicht die Aussage eines Seminarteilnehmers.",
+    href: "/praxisbeispiele#service",
+    hrefLabel: "Passendes Praxisbeispiel ansehen",
   },
   {
-    eyebrow: "Folgewirkung",
-    title: "Aus einem Pilotseminar wurden weitere Trainings und Folgeschritte",
-    quote:
-      "Ich bin sprachlos. Nach diesem Seminar folgten vier weitere Seminare, mehrere Vertriebstage für Projektleiter und Key Account Manager sowie Führungs- und Verhandlungstrainings für Bauleiter.",
+    number: "02",
+    eyebrow: "Pilotseminar mit Folgewirkung",
+    title: "Aus einem ersten Seminar entstand ein breiter Entwicklungsbogen",
+    quote: "Ich bin ... sprachlos!",
     author: "Stefan Zöller",
     role: "Leitung NL Stuttgart Service & FM",
     company: "R.O.M. Rud. Otto Meyer Technik GmbH & Co. KG, Stuttgart",
-    summary: "Ein starker Hinweis darauf, dass die Wirkung intern sichtbar und anschlussfähig war.",
-    imageSrc: "/images/grossmann/home-case-technical-discussion.jpg",
-    imageAlt: "Workshop- und Gesprächsszene aus einem technischen Trainingsumfeld",
-    ctaHref: "/praxisbeispiele#siemens",
-    ctaLabel: "Projekt- und Verhandlungskontext ansehen",
+    initials: "SZ",
+    context:
+      "Das war der erste Satz des Serviceleiters am Ende des Pilotseminars. Danach folgten vier weitere Seminare, mehrere Vertriebstage sowie Führungs- und Verhandlungstrainings. Dieser Ablauf ist redaktioneller Kontext und kein längeres wörtliches Zitat.",
+    href: "/praxisbeispiele#service",
+    hrefLabel: "Service-Praxisbeispiel ansehen",
   },
 ]
 
 const testimonialGroups = [
   {
-    id: "service-und-wirkung",
-    title: "Service, Kundenkontakt und sichtbare Wirkung",
-    body: "Diese Stimmen sind besonders stark, wenn Serviceeinsätze, Kundenkontakt und unmittelbare Alltagstauglichkeit im Vordergrund stehen.",
+    id: "service",
+    title: "Service, Kundenkontakt und langfristige Wirkung",
+    body: "Diese Stimmen zeigen direkte Alltagstauglichkeit, Qualität im Training und tragfähige Zusammenarbeit im technischen Service.",
     items: [
       {
-        category: "Servicepraxis",
+        number: "05",
         title: "Mit Sicherheit die beste Schulung",
         quote:
-          "Da ich schon ein paar solcher Schulungen erlebt habe, kann ich mit Sicherheit sagen, dass diese die beste war. Zielsetzung jedes einzelnen Teilnehmers erreicht, informativ und spannend.",
+          "Bernd hat bei uns eine 2-tägige Schulung gehalten über das Thema Kommunikation. Da ich schon ein paar solcher Schulungen erlebt habe, kann ich mit Sicherheit sagen, dass diese die Beste war. Zielsetzung jedes einzelnen Teilnehmers erreicht, informativ und spannend. Das Gelernte kann nächste Woche gleich umgesetzt werden. Klare Empfehlung.",
         author: "Magnus Jungel",
         role: "Service-Techniker weltweit",
         company: "Ekato AG, Schopfheim",
-        proof: "Starker Qualitätsvergleich aus Teilnehmerperspektive.",
         href: "/zielgruppen#servicetechniker",
         hrefLabel: "Zielgruppe Service ansehen",
       },
       {
-        category: "Langfristige Zusammenarbeit",
+        number: "06",
         title: "Seit Jahren erfolgreich - auch online",
         quote:
-          "Kundendiensttechniker trainiert Herr Grossmann seit mehreren Jahren bei uns - sehr erfolgreich. Für Servicetechniker eines Anlagenbauers ist er ein motivierender Trainer mit viel Erfahrung.",
+          "Kundendiensttechniker trainiert Herr Grossmann seit mehreren Jahren bei uns - sehr erfolgreich. Seine freundlich formulierten Rückmeldungen gaben unseren Teilnehmern etwas zum Nachdenken, wie diese selbst sagten. Dem Trainer gelang es, trotz didaktisch einschränkender Online-Bedingungen, unsere jungen Männer bestens zu motivieren. Für Servicetechniker eines Anlagenbauers ist er ein motivierender Trainer - mit viel Erfahrung.",
         author: "Philipp Reimann",
         role: "Teamleiter CSS Central Function",
         company: "Saacke GmbH",
-        proof: "Mehrjährige Zusammenarbeit statt einmaliger Momentaufnahme.",
         href: "/praxisbeispiele#service",
         hrefLabel: "Service-Praxisbeispiel ansehen",
       },
-    ],
-  },
-  {
-    id: "transfer-und-fuehrung",
-    title: "Transfer, Führung und persönliche Tragfähigkeit",
-    body: "Hier wird sichtbar, dass die Arbeit nicht nur im Seminarraum gut klingt, sondern in Führungs-, Konflikt- und Alltagssituationen weiterträgt.",
-    items: [
       {
-        category: "Transferwirkung",
-        title: "Techniken, die beruflich und privat tragen",
-        quote:
-          "Deine Techniken kann ich nicht nur beruflich, sondern auch privat anwenden. Besonders die Tipps zur Konfliktlösung, aber auch die Wirkung der eigenen Körpersprache, sind unfassbar hilfreich.",
-        author: "Maximilian Sebald",
-        role: "Junior Commercial Program Manager",
-        company: "RAUMEDIC AG, Helmbrechts",
-        proof: "Zeigt, dass Wirkung nicht theoretisch bleibt, sondern in Verhalten übergeht.",
-        href: "/themen-formate",
-        hrefLabel: "Passende Formate ansehen",
-      },
-      {
-        category: "Teamfeedback",
+        number: "08",
         title: "Ein Serviceleiter über die Wirkung im Team",
         quote:
-          "Sehr praxisnahes Coaching für Servicetechniker als Verkäufer. Das Feedback aus dem Team an mich war sehr positiv.",
+          "Sehr praxisnahes Coaching für Servicetechniker als 'Verkäufer'. Mit vielen Rollenspielen und Beispielen aus dem täglichen Leben sowie guten Lösungsansätzen, um Situationen im Kundenkontakt besser zu meistern. Als Leiter eines regionalen Serviceteams habe ich selber viele Situationen wiedererkannt, die ich bereits intuitiv genutzt habe, nach dem Gelernten aber viel gezielter einsetzen kann. Das Feedback aus dem Team an mich war sehr positiv.",
         author: "Klaus Dieter Nuss",
         role: "Serviceeinsatzleiter",
         company: "Saacke GmbH, Bremen",
-        proof: "Knapp, aber stark: Praxisnähe und Resonanz im Team werden direkt bestätigt.",
         href: "/zielgruppen#teams-niederlassungen",
         hrefLabel: "Teams & Niederlassungen ansehen",
       },
     ],
   },
+  {
+    id: "fuehrung-transfer",
+    title: "Transfer, Führung und persönliche Entwicklung",
+    body: "Hier wird sichtbar, wie die Arbeit in Konflikten, Führungssituationen, Coaching und Gruppendynamik weiterträgt.",
+    items: [
+      {
+        number: "03",
+        title: "Techniken, die beruflich und privat tragen",
+        quote:
+          "Ich wollte mich noch einmal für die drei Tage bedanken, die du bei uns dein Konfliktlösungs-Training abgehalten hast. Deine Techniken kann ich nicht nur beruflich, sondern auch privat anwenden. Schon während der einzelnen Lektionen sind mir unzählige Situationen eingefallen, in denen ich das Gelernte umsetzen könnte. Besonders die Tipps zur Konfliktlösung, aber auch generell die Wirkung der eigenen (Körper-)Sprache, sind unfassbar hilfreich.",
+        author: "Maximilian Sebald",
+        role: "Junior Commercial Program Manager",
+        company: "RAUMEDIC AG, Helmbrechts",
+        href: "/themen-formate#fuehrung",
+        hrefLabel: "Themen & Formate ansehen",
+      },
+      {
+        number: "04",
+        title: "Lockerheit, die Gruppen öffnet",
+        quote:
+          "Wir sind uns alle einig, dass wir viel mitnehmen konnten und auch im Alltag einiges umsetzen können. Ich finde es großartig, wie du mit Menschen umgehst und sie einzuschätzen weißt. Du hast solch eine Lockerheit in die Gruppe gebracht, dass man sich auch als 'Neuling' unter all den anderen wohlgefühlt und sich getraut hat, aus sich herauszukommen.",
+        author: "Nina Pollak",
+        role: "Human Resources",
+        company: "Treofan Germany GmbH & Co. KG, Neunkirchen",
+        href: "/zielgruppen#teams-niederlassungen",
+        hrefLabel: "Teams & Niederlassungen ansehen",
+      },
+      {
+        number: "07",
+        title: "Viel gelernt - auch über mich selbst",
+        quote:
+          "Das Kommunikationscoaching bei Bernd hat mir gezeigt, welche Komplexität in verschiedenen Gesprächssituationen stecken kann. Die Teilnehmer wurden über den kompletten Zeitraum aktiv eingebunden, sodass zu keinem Zeitpunkt Langeweile aufzukommen drohte. In diesem Coaching habe ich viel gelernt, auch über mich selbst. Bernd schafft es, sein Wissen auf sehr lebhafte Weise weiterzugeben, und man erkennt, dass er große Freude an der Lehrtätigkeit hat. Ich würde jederzeit wieder teilnehmen!",
+        author: "Fabian Rittweg",
+        role: "Product Manager Application Technology",
+        company: "RAUMEDIC AG",
+        href: "/themen-formate#coaching",
+        hrefLabel: "Persönliches Coaching ansehen",
+      },
+      {
+        number: "09",
+        title: "Vom Mitarbeiter zum Vorgesetzten",
+        quote:
+          "'Vom Mitarbeiter zum Vorgesetzten' - das Seminar ist sehr praxisnah gestaltet, individuelle Fragen wurden beantwortet und in den geplanten Ablauf integriert. Außerdem war das Seminar sehr kurzweilig gestaltet, auch bedingt durch den Trainer Bernd Grossmann. Tolles Seminar, was ich sehr empfehlen kann, für angehende Führungskräfte!",
+        author: "Ariane Wode",
+        role: "Prokuristin - stellv. Leitung Logistik",
+        company: "Bioscientia Logistik GmbH",
+        href: "/zielgruppen#technische-fuehrung",
+        hrefLabel: "Technische Führung ansehen",
+      },
+    ],
+  },
 ]
 
-const nextSteps = [
-  {
-    title: "Praxisbeispiele ansehen",
-    body: "Wer die Aussagen mit konkreten Situationen verbinden will, findet dort nachvollziehbare Ausgangslagen, Vorgehen und Wirkung.",
-    href: "/praxisbeispiele",
-    label: "Zu Praxisbeispielen",
-  },
-  {
-    title: "Passende Zielgruppe finden",
-    body: "Wenn noch nicht klar ist, welcher Hebel in Ihrer Rolle zählt, führt der Zielgruppenblick oft am schnellsten weiter.",
-    href: "/zielgruppen",
-    label: "Zu Zielgruppen",
-  },
-]
+const boschRecommendation = {
+  number: "10",
+  title: "Empfohlen im Hause Bosch",
+  quote:
+    "Als Folge seiner langjährigen und erfolgreichen Zusammenarbeit mit einigen Werken der Robert Bosch Gruppe, bei denen er sich durch ein hohes Maß an Professionalität ausgezeichnet hat, möchte ich Sie bitten, sofern ein Bedarf für die von ihm angebotenen Trainingsleistungen besteht, auch Herrn Grossmann bei der Angebotsanforderung zu berücksichtigen.",
+  author: "Dieter Heins Kron",
+  role: "Bosch Service Solutions SRL / Robert Bosch GmbH",
+  company: "Timisoara",
+}
 
 export const metadata: Metadata = {
   title: "Referenzen & Stimmen | Grossmann Training",
   description:
-    "Ausgewählte Testimonials, Kundenstimmen und Referenzen aus technischen Service-, Führungs- und Projektumfeldern.",
+    "Zehn ausgewählte Kundenstimmen und Referenzen aus technischen Service-, Führungs- und Projektumfeldern.",
 }
 
 export default function ReferenzenStimmenPage() {
@@ -150,163 +189,100 @@ export default function ReferenzenStimmenPage() {
         <PageHero
           eyebrow="Referenzen & Stimmen"
           title="Was Kunden über die Zusammenarbeit sagen"
-          body="Die Stimmen stammen aus technischen Service-, Führungs- und Projektkontexten. Sie zeigen, wie die Arbeit in der Praxis erlebt wird - ruhig, konkret und mit Wirkung im Alltag."
+          body="Die Stimmen stammen aus technischen Service-, Führungs- und Projektkontexten. Sie zeigen Wiederbeauftragung, Alltagstauglichkeit und Wirkung in realen Situationen."
         />
 
         <section className="border-b border-border/70 bg-white py-10 sm:py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-4 sm:grid-cols-3">
               {proofSignals.map((item) => (
-                <div key={item.label} className="rounded-[24px] border border-border/70 bg-[#fcfbf8] p-6 shadow-[0_10px_30px_rgba(16,33,43,0.03)]">
+                <div key={item.label} className="soft-card p-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.label}</p>
-                  <h2 className="mt-4 font-display text-[1.95rem] font-medium leading-[1.08] tracking-[-0.03em] text-foreground">
-                    {item.value}
-                  </h2>
-                  <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.body}</p>
+                  <h2 className="mt-4 font-display text-[1.95rem] font-medium leading-[1.08] tracking-[-0.03em]">{item.value}</h2>
+                  <p className="mt-3 text-base leading-7 text-muted-foreground">{item.body}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="border-b border-border/70 bg-[#fbfaf6] py-18 sm:py-24" aria-labelledby="video-testimonial-heading">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:gap-14">
-              <div>
-                <SectionEyebrow>Teilnehmerstimme im Video</SectionEyebrow>
-                <h2
-                  id="video-testimonial-heading"
-                  className="mt-5 max-w-xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl"
-                >
-                  Eine persönliche Stimme direkt aus der Praxis
-                </h2>
-                <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">
-                  Ein Teilnehmer schildert mit eigenen Worten, wie er das Training für Techniker im Kundenkontakt
-                  erlebt hat. Ungefiltert, persönlich und unmittelbar nach der gemeinsamen Arbeit.
-                </p>
-                <p className="mt-5 text-xs leading-6 text-muted-foreground">
-                  Mit dem Abspielen wird eine Verbindung zu YouTube hergestellt.
-                </p>
-              </div>
-
-              <VideoTestimonial />
+        <section id="video-kundenstimme" className="border-b border-border/70 bg-[#fbfaf6] py-18 sm:py-24" aria-labelledby="video-testimonial-heading">
+          <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:gap-14 lg:px-8">
+            <div>
+              <SectionEyebrow>Kundenstimme im Video</SectionEyebrow>
+              <h2 id="video-testimonial-heading" className="mt-5 max-w-xl font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">
+                Ein Service Manager berichtet aus Auftraggebersicht
+              </h2>
+              <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">
+                Als Kunde und Auftraggeber schildert er seine Erfahrung mit dem Training für Techniker im
+                Kundenkontakt. Er ist Service Manager und kein Teilnehmer des Seminars.
+              </p>
+              <p className="mt-5 text-sm leading-7 text-muted-foreground">Mit dem Abspielen wird eine Verbindung zu YouTube hergestellt.</p>
             </div>
+            <VideoTestimonial />
           </div>
         </section>
 
         <section className="bg-white py-18 sm:py-24">
-          <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl space-y-7 px-4 sm:px-6 lg:px-8">
             {featuredTestimonials.map((item, index) => (
-              <section
-                key={item.title}
-                className={`overflow-hidden rounded-[32px] shadow-[0_25px_75px_rgba(16,33,43,0.12)] ${index === 0 ? "bg-[#102f42] text-white" : "border border-border/70 bg-[#fcfbf8]"}`}
-              >
-                <div className={`grid gap-0 lg:grid-cols-[1.12fr_0.88fr] ${index === 1 ? "lg:grid-cols-[0.88fr_1.12fr]" : ""}`}>
-                  <div className={`p-8 sm:p-10 lg:p-12 ${index === 1 ? "lg:order-2" : ""}`}>
-                    <p className={`text-xs font-semibold uppercase tracking-[0.24em] ${index === 0 ? "text-white/72" : "text-primary"}`}>
-                      {item.eyebrow}
-                    </p>
-                    <h2 className={`mt-5 max-w-3xl font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.55rem] ${index === 0 ? "text-white" : "text-foreground"}`}>
-                      {item.title}
-                    </h2>
-                    <blockquote
-                      className={`mt-6 max-w-4xl font-display text-[1.5rem] font-light italic leading-[1.7] sm:text-[1.9rem] ${index === 0 ? "text-white/90" : "text-foreground/84"}`}
-                    >
+              <article key={item.number} className={`overflow-hidden rounded-[32px] border border-border/70 ${index === 0 ? "bg-[#102f42] text-white" : "bg-[#fcfbf8]"}`}>
+                <div className="grid lg:grid-cols-[1fr_18rem]">
+                  <div className="p-8 sm:p-10 lg:p-12">
+                    <p className={`text-xs font-semibold uppercase tracking-[0.24em] ${index === 0 ? "text-white/75" : "text-primary"}`}>{item.number} · {item.eyebrow}</p>
+                    <h2 className={`mt-5 max-w-3xl font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.55rem] ${index === 0 ? "text-white" : "text-foreground"}`}>{item.title}</h2>
+                    <blockquote className={`mt-6 max-w-4xl font-display text-[1.45rem] font-light italic leading-[1.65] sm:text-[1.8rem] ${index === 0 ? "text-white/92" : "text-foreground/86"}`}>
                       „{item.quote}“
                     </blockquote>
-                    <p className={`mt-6 text-xs uppercase tracking-[0.18em] ${index === 0 ? "text-white/76" : "text-muted-foreground"}`}>
-                      {item.author} · {item.role} · {item.company}
+                    <p className={`mt-6 text-base leading-8 ${index === 0 ? "text-white/82" : "text-muted-foreground"}`}>{item.context}</p>
+                    <p className={`mt-6 text-xs font-semibold uppercase tracking-[0.18em] ${index === 0 ? "text-white/78" : "text-muted-foreground"}`}>
+                      {item.author} · {item.role}
                     </p>
-                    <p className={`mt-5 max-w-2xl text-sm leading-7 ${index === 0 ? "text-white/82" : "text-muted-foreground"}`}>
-                      {item.summary}
-                    </p>
-                    <Link
-                      href={item.ctaHref}
-                      className={`mt-7 inline-flex items-center gap-2 text-sm font-semibold transition-colors ${index === 0 ? "text-white hover:text-white/82" : "text-primary hover:text-primary-dark"}`}
-                    >
-                      {item.ctaLabel}
-                      <ArrowRight className="h-4 w-4" />
+                    <p className={`mt-2 text-sm leading-7 ${index === 0 ? "text-white/78" : "text-muted-foreground"}`}>{item.company}</p>
+                    <Link href={item.href} className={`mt-6 inline-flex items-center gap-2 text-sm font-semibold ${index === 0 ? "text-white" : "text-primary"}`}>
+                      {item.hrefLabel} <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
-
-                  <div className={`relative min-h-[300px] ${index === 1 ? "lg:order-1" : ""}`}>
-                    <Image
-                      src={item.imageSrc}
-                      alt={item.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 40vw"
-                    />
+                  <div className={`flex min-h-[240px] items-center justify-center border-t p-8 lg:min-h-full lg:border-l lg:border-t-0 ${index === 0 ? "border-white/10 bg-white/5" : "border-border/70 bg-white"}`}>
+                    <div className={`flex h-32 w-32 items-center justify-center rounded-full border font-display text-4xl ${index === 0 ? "border-white/20 bg-white/8 text-white" : "border-primary/15 bg-primary/8 text-primary"}`} aria-label={`Initialen von ${item.author}`}>
+                      {item.initials}
+                    </div>
                   </div>
                 </div>
-              </section>
+              </article>
             ))}
           </div>
         </section>
 
-        <section className="border-t border-border/70 bg-white py-18 sm:py-24">
+        <section className="border-y border-border/70 bg-[#fbfaf6] py-18 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
-              <div>
-                <SectionEyebrow>Weitere Stimmen</SectionEyebrow>
-                <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.8rem]">
-                  Stimmen nach Kontext geordnet statt als lose Sammlung
-                </h2>
-              </div>
-              <p className="max-w-2xl text-base leading-8 text-muted-foreground">
-                Nicht jede Stimme beweist dasselbe. Manche zeigen nachhaltige Zusammenarbeit, andere direkte
-                Alltagstauglichkeit, Wiederbeauftragung oder starke Resonanz im Team.
-              </p>
+            <SectionEyebrow>Weitere Stimmen</SectionEyebrow>
+            <div className="mt-5 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+              <h2 className="font-display text-4xl font-light leading-tight tracking-[-0.03em] sm:text-5xl">Nach Kontext geordnet, vollständig aus dem Arbeitsdokument</h2>
+              <p className="max-w-2xl text-base leading-8 text-muted-foreground">Die Reihenfolge und Zuordnung folgen dem Top-10-Dokument. Wo kein freigegebenes Porträt vorliegt, wird bewusst mit Initialen statt mit einer fremden Person gearbeitet.</p>
             </div>
 
             <div className="mt-12 space-y-8">
               {testimonialGroups.map((group) => (
-                <section key={group.id} className="rounded-[30px] border border-border/70 bg-[#fcfbf8] p-6 sm:p-8 shadow-[0_12px_35px_rgba(16,33,43,0.04)]">
-                  <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+                <section key={group.id} className="rounded-[30px] border border-border/70 bg-white p-6 shadow-[0_12px_35px_rgba(16,33,43,0.04)] sm:p-8">
+                  <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Kontext</p>
-                      <h3 className="mt-4 font-display text-3xl font-medium leading-tight tracking-[-0.03em] text-foreground">
-                        {group.title}
-                      </h3>
-                      <p className="mt-4 max-w-xl text-base leading-8 text-muted-foreground">{group.body}</p>
+                      <h3 className="mt-4 font-display text-3xl font-medium leading-tight tracking-[-0.03em]">{group.title}</h3>
+                      <p className="mt-4 text-base leading-8 text-muted-foreground">{group.body}</p>
                     </div>
-
                     <div className="grid gap-5 md:grid-cols-2">
                       {group.items.map((item) => (
-                        <article key={item.author} className="white-card p-6 sm:p-7">
+                        <article key={item.number} className="soft-card p-6 sm:p-7">
                           <div className="flex items-center gap-3">
-                            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
-                              {item.author
-                                .split(" ")
-                                .slice(0, 2)
-                                .map((part) => part[0])
-                                .join("")}
-                            </div>
-                            <div>
-                              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">{item.category}</p>
-                              <p className="mt-1 text-sm font-semibold text-foreground">{item.title}</p>
-                            </div>
+                            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">{item.number}</span>
+                            <h4 className="font-display text-xl font-medium leading-snug">{item.title}</h4>
                           </div>
-
-                          <blockquote className="mt-5 font-display text-[1.3rem] font-light italic leading-[1.75] text-foreground/84">
-                            „{item.quote}“
-                          </blockquote>
-
-                          <div className="mt-6 rounded-[18px] border border-border/70 bg-[#faf8f3] p-4">
-                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Was das belegt</p>
-                            <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.proof}</p>
-                          </div>
-
-                          <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                            {item.author} · {item.role}
-                          </p>
+                          <blockquote className="mt-5 font-display text-[1.24rem] font-light italic leading-[1.7] text-foreground/86">„{item.quote}“</blockquote>
+                          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">{item.author} · {item.role}</p>
                           <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.company}</p>
-                          <Link
-                            href={item.href}
-                            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
-                          >
-                            {item.hrefLabel}
-                            <ArrowRight className="h-4 w-4" />
+                          <Link href={item.href} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark">
+                            {item.hrefLabel} <ArrowRight className="h-4 w-4" />
                           </Link>
                         </article>
                       ))}
@@ -315,42 +291,28 @@ export default function ReferenzenStimmenPage() {
                 </section>
               ))}
             </div>
+
+            <article className="mt-8 rounded-[30px] border border-border/70 bg-[#102f42] p-8 text-white shadow-[0_20px_60px_rgba(16,33,43,0.12)] sm:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/72">{boschRecommendation.number} · Referenz & Erfahrung</p>
+              <h3 className="mt-5 font-display text-3xl font-light leading-tight sm:text-4xl">{boschRecommendation.title}</h3>
+              <blockquote className="mt-6 max-w-5xl font-display text-[1.45rem] font-light italic leading-[1.7] text-white/90">„{boschRecommendation.quote}“</blockquote>
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-white/78">{boschRecommendation.author} · {boschRecommendation.role} · {boschRecommendation.company}</p>
+            </article>
           </div>
         </section>
 
-        <section className="border-t border-border/70 bg-white py-18 sm:py-24">
+        <section className="bg-white py-18 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="rounded-[30px] border border-border/70 bg-[#fcfbf8] p-6 sm:p-8 shadow-[0_12px_35px_rgba(16,33,43,0.04)]">
-              <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
-                <div>
-                  <SectionEyebrow>Wie es weitergeht</SectionEyebrow>
-                  <h2 className="mt-5 font-display text-3xl font-light leading-tight tracking-[-0.03em] sm:text-[2.65rem]">
-                    Von der Stimme zum passenden nächsten Blick
-                  </h2>
-                  <p className="mt-4 max-w-xl text-base leading-8 text-muted-foreground">
-                    Stimmen schaffen Vertrauen. Für die nächste Entscheidung helfen meist entweder die Praxisbeispiele
-                    oder der Blick auf die passende Zielgruppe.
-                  </p>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  {nextSteps.map((item) => (
-                    <div key={item.title} className="rounded-[22px] border border-border/70 bg-white p-5 sm:p-6">
-                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Nächster Schritt</p>
-                      <h3 className="mt-4 font-display text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground">
-                        {item.title}
-                      </h3>
-                      <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.body}</p>
-                      <Link
-                        href={item.href}
-                        className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
-                      >
-                        {item.label}
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </div>
-                  ))}
-                </div>
+            <div className="grid gap-8 lg:grid-cols-[0.65fr_1.35fr] lg:items-start">
+              <div>
+                <SectionEyebrow>Referenzerfahrung</SectionEyebrow>
+                <h2 className="mt-5 font-display text-4xl font-light leading-tight tracking-[-0.03em]">Ausgewählte technische Unternehmen</h2>
+                <p className="mt-5 text-base leading-8 text-muted-foreground">Die Namen dokumentieren Arbeitskontexte. Sie sind kein Ersatz für die konkreten Stimmen und Praxisbeispiele.</p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {clientReferences.map((client) => (
+                  <span key={client} className="rounded-full border border-border bg-[#fcfbf8] px-5 py-3 text-sm font-semibold text-foreground/80">{client}</span>
+                ))}
               </div>
             </div>
           </div>
